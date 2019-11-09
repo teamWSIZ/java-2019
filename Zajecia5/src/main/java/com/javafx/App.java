@@ -3,14 +3,19 @@
  */
 package com.javafx;
 
-public class App {
-    public String getGreeting() {
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-        return "Hello world.";
-    }
+public class App extends Application {
 
-    public static void main(String[] args) {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Group group = new Group();
+        Scene scene = new Scene(group,500,500);
 
-        System.out.println(new App().getGreeting());
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }
