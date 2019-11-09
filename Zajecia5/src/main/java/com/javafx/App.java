@@ -3,10 +3,15 @@
  */
 package com.javafx;
 
+import javafx.animation.RotateTransition;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class App extends Application {
 
@@ -14,6 +19,26 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         Group group = new Group();
         Scene scene = new Scene(group,500,500);
+
+        for(int i=0;i<10;i++) {
+            Rectangle rect = new Rectangle();
+            rect.setWidth(20);
+            rect.setHeight(20);
+
+            rect.setTranslateX(i*40);
+            rect.setTranslateY(250);
+
+            rect.setFill(Color.BLUE);
+
+            RotateTransition rt = new RotateTransition();
+            rt.setDuration(Duration.seconds(20));
+            rt.setFromAngle(0);
+            rt.setToAngle(10*360);
+            rt.setNode(rect);
+            rt.playFromStart();
+
+            group.getChildren().add(rect);
+        }
 
         primaryStage.setScene(scene);
         primaryStage.show();
