@@ -13,7 +13,7 @@ public class Main {
         for(int i=0;i<zmienna.length;i++){
             suma = suma + zmienna[i];
         }
-        return suma/zmienna.length;
+        return suma;
     }
 
     public static double srednia(double tablica[]){
@@ -23,7 +23,7 @@ public class Main {
             suma = suma + tablica[i];
         }
 
-        return suma;
+        return suma/tablica.length;
     }
 
     public static void main(String[] args) {
@@ -39,6 +39,12 @@ public class Main {
 
 	    System.out.println("Suma elementów: "+suma);
 	    System.out.println("Srednia: "+srednia);
+
+	    double tab[] = new double[100];
+	    for(int i=0;i<tab.length;i++)
+	        tab[i]=Math.random()*100;
+
+        sumaElementow(tab);
 
     }
 }
