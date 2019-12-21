@@ -26,6 +26,15 @@ public class Main {
         return suma/tablica.length;
     }
 
+    public static int elementyMniejszeOdsredniej(double tablica[], double srednia){
+        int ilosc_elementow = 0;
+        for(int i=0;i<tablica.length;i++){
+            if(tablica[i]<srednia)
+                ilosc_elementow++;
+        }
+        return ilosc_elementow;
+    }
+
     public static void main(String[] args) {
 	    double tablica[] = new double[5];
 
@@ -40,11 +49,7 @@ public class Main {
 	    System.out.println("Suma elementów: "+suma);
 	    System.out.println("Srednia: "+srednia);
 
-	    double tab[] = new double[100];
-	    for(int i=0;i<tab.length;i++)
-	        tab[i]=Math.random()*100;
 
-        sumaElementow(tab);
 
     }
 }
