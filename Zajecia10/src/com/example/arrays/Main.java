@@ -1,7 +1,8 @@
 package com.example.arrays;
 
-public class Main {
+import java.util.ArrayList;
 
+public class Main {
     public static void wyswietl(double tablica[]){
         for(int i=0;i<tablica.length;i++)
             System.out.println("Element["+i+"]="+tablica[i]);
@@ -49,7 +50,17 @@ public class Main {
 	    System.out.println("Suma elementów: "+suma);
 	    System.out.println("Srednia: "+srednia);
 
+	    ArrayList<Integer> tablica2 = new ArrayList<>();
 
+	    for(int i=0;i<100;i++)
+	        tablica2.add(i);
+
+	    for(int i=0;i<100;i++){
+	        tablica2.get(i);
+        }
+
+	    for(int element : tablica2){
+        }
 
     }
 }
