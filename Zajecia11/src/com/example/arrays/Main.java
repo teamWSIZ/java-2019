@@ -39,7 +39,7 @@ public class Main {
 		int j=0;
 
 		for(int i=tab.length;i<nowy_rozmiar;i++) {
-			tablica[i] = elementy[j];
+			tablica[i] = elementy[i-tab.length];
 			j++;
 		}
 
