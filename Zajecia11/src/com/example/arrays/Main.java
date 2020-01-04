@@ -7,13 +7,23 @@ public class Main {
 			System.out.println("Element["+i+"]="+tab[i]);
 	}
 
+	public static void wylosuj(double tab[]){
+		for(int i=0;i<tab.length;i++)
+			tab[i] = (int)(Math.random()*100)%100;
+	}
+
+	public static void wpisz_kwadraty(double tab[]){
+		tab[4] = 4*4;
+	}
+
     public static void main(String[] args) {
 	    double tablica[] = new double[100];
+		double t1[] = new double[10];
 
-	    for(int i=0;i<tablica.length;i++)
-	    	tablica[i] = Math.random()*100;
+	    wylosuj(tablica);
+	    wyswietl(tablica);
 
-	    System.out.println("Element[0]="+tablica[0]);
-
+	    System.out.println("--------------T1--------------");
+	    wyswietl(t1);
     }
 }
