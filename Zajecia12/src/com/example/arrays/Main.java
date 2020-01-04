@@ -3,10 +3,10 @@ package com.example.arrays;
 import java.util.ArrayList;
 
 class Student {
-    String imie;
-    String nazwisko;
-    int nr_indeksu;
-    int wiek;
+    private String imie;
+    private String nazwisko;
+    private int nr_indeksu;
+    private int wiek;
 
     Student(String imie, String nazwisko, int nr_indeksu, int wiek) {
         this.imie = imie;
@@ -18,8 +18,12 @@ class Student {
     void wyswietl() {
         System.out.println("Imie: " + imie);
         System.out.println("Nazwisko: " + nazwisko);
-        System.out.println("Numer indeksu" + nr_indeksu);
+        System.out.println("Numer indeksu: " + nr_indeksu);
         System.out.println("Wiek: " + wiek);
+    }
+
+    public void ZmienNumerIndeksu(int nr_indeksu){
+        this.nr_indeksu = nr_indeksu;
     }
 }
 
@@ -27,16 +31,18 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        ArrayList<Student> tablica = new ArrayList<>();
+        ArrayList<Student> baza_studentow = new ArrayList<>();
 
         Student adrian = new Student("Adrian","Adamek",2343,20);
+        Student ewa = new Student("Ewa","Kowalska",2345,19);
 
-        adrian.imie = "Adrian";
-        adrian.nazwisko = "Adamek";
-        adrian.nr_indeksu = 2343;
-        adrian.wiek = 20;
+        baza_studentow.add(adrian);
+        baza_studentow.add(ewa);
 
         adrian.wyswietl();
+        adrian.ZmienNumerIndeksu(200);
+        adrian.wyswietl();
+
 
     }
 }
