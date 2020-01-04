@@ -36,6 +36,13 @@ public class Main {
 		for(int i=0;i<tab.length;i++)
 			tablica[i] = tab[i];
 
+		int j=0;
+
+		for(int i=tab.length;i<nowy_rozmiar;i++) {
+			tablica[i] = elementy[j];
+			j++;
+		}
+
 		return tablica;
 	}
 
@@ -58,6 +65,8 @@ public class Main {
 		wpisz_kwadraty(t2);
 		wpisz_kwadraty(elementy);
 
+		double nowa_tablica[] = dodajElementy(t2,elementy);
 
+		wyswietl1("nowa_tablica=",nowa_tablica);
     }
 }
