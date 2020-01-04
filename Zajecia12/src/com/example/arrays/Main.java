@@ -2,22 +2,31 @@ package com.example.arrays;
 
 import java.util.ArrayList;
 
+class Student{
+    String imie;
+    String nazwisko;
+    int nr_indeksu;
+    int wiek;
+
+    void wyswietl(){
+        System.out.println("Imie: "+imie);
+        System.out.println("Nazwisko: "+nazwisko);
+        System.out.println("Numer indeksu"+nr_indeksu);
+        System.out.println("Wiek: "+wiek);
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        ArrayList<Integer> tablica = new ArrayList<>();
+        ArrayList<Student> tablica = new ArrayList<>();
 
-        tablica.add(20);
-
-        for(int i=0;i<=10;i++)
-            tablica.add((int)Math.pow(i,4));
-
-        tablica.addAll(tablica);
-
-        for(int i=0;i<tablica.size();i++)
-            System.out.println(tablica.get(i));
-
+        Student adrian = new Student();
+        adrian.imie = "Adrian";
+        adrian.nazwisko = "Adamek";
+        adrian.nr_indeksu = 2343;
+        adrian.wiek = 20;
 
     }
 }
