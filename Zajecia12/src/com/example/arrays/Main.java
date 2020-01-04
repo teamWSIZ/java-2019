@@ -40,8 +40,12 @@ public class Main {
         baza_studentow.add(ewa);
 
         adrian.wyswietl();
+        ewa.wyswietl();
+
         adrian.ZmienNumerIndeksu(200);
-        adrian.wyswietl();
+
+        for(Student student : baza_studentow)
+            student.wyswietl();
 
 
     }
