@@ -28,6 +28,17 @@ public class Main {
 			tab[i] = i*i;
 	}
 
+	public static double[] dodajElementy(double tab[], double elementy[]){
+		int nowy_rozmiar = tab.length+elementy.length;
+
+		double tablica[] = new double[nowy_rozmiar];
+
+		for(int i=0;i<tab.length;i++)
+			tablica[i] = tab[i];
+
+		return tablica;
+	}
+
     public static void main(String[] args) {
 	    double tablica[] = new double[10];
 		double t1[] = new double[10];
@@ -40,5 +51,13 @@ public class Main {
 	    wyswietl(t1);
 
 		wyswietl1("t1",t1);
+
+		double t2[] = new double[10];
+		double elementy[] = new double[5];
+
+		wpisz_kwadraty(t2);
+		wpisz_kwadraty(elementy);
+
+
     }
 }
