@@ -48,6 +48,18 @@ public class Main {
         });
 
         wyswietlTablice(tablica);
+
+        //Kolejne sortowanie
+        tablica.sort((o1,o2)->{
+            if(o1+o2>o2*o2)
+                return -1;
+            if(o1*o2<o1*o1)
+                return 1;
+
+            return 0;
+        });
+
+        wyswietlTablice(tablica);
     }
 
     public static void dodajLiczby(ArrayList<Integer> tab, int no){
