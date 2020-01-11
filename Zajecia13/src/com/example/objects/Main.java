@@ -1,6 +1,7 @@
 package com.example.objects;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -22,6 +23,13 @@ public class Main {
         for (Book b0 : books) {
             b0.print();
         }
+
+        books.sort(new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return 0;
+            }
+        });
     }
 
     public static void dodajKsiazki(ArrayList<Book> ksiazki, Integer no) {
