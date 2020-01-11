@@ -15,4 +15,14 @@ public class Book {
         this.pages = pages;
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Tytuł: "+title+" Autor: "+author+" Liczba stron: "+pages+" Cena: "+price;
+    }
+
+    public void print(){
+
+    }
+
 }
