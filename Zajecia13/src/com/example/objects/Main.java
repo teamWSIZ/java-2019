@@ -8,5 +8,8 @@ public class Main {
 
 	    System.out.println(book.toString());
 	    System.out.println(book1.toString());
+
+	    book.print();
+	    book1.print();
     }
 }

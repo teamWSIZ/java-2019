@@ -22,7 +22,12 @@ public class Book {
     }
 
     public void print(){
-
+        System.out.println("_____________________");
+        System.out.println("Tytuł: "+title);
+        System.out.println("Autor: "+author);
+        System.out.println("Liczba stron: "+pages);
+        System.out.println("Cena: "+price);
+        System.out.println("_____________________");
     }
 
 }
