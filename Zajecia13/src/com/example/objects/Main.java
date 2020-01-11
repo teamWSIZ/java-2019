@@ -1,6 +1,7 @@
 package com.example.objects;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -13,7 +14,10 @@ public class Main {
         books.add(book);
         books.add(book1);
 
-        dodajKsiazki(books, 20);
+        Scanner scanner  = new Scanner(System.in);
+        System.out.print("Ilość książek: ");
+
+        dodajKsiazki(books, scanner.nextInt());
 
         for (Book b0 : books) {
             b0.print();
