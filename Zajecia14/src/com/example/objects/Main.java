@@ -17,6 +17,15 @@ public class Main {
     }
 
     public static void wyswietlTablice(ArrayList<Integer> tab){
+        System.out.print("[");
+
+        for(int i=0;i<tab.size();i++) {
+            if (i < tab.size() - 1)
+                System.out.print(i + ", ");
+            else
+                System.out.print(i);
+        }
+        System.out.println("]");
 
     }
 }
