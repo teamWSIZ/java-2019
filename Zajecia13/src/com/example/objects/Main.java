@@ -29,9 +29,21 @@ public class Main {
             @Override
             public int compare(Book o1, Book o2) {
 
+                if(o1.getPrice()>o2.getPrice())
+                    return 1;
+
+                if(o2.getPrice()>o1.getPrice())
+                    return -1;
+
                 return 0;
             }
         });
+
+        for (Book b0 : books) {
+            b0.print();
+        }
+
+
     }
 
     public static void dodajKsiazki(ArrayList<Book> ksiazki, Integer no) {

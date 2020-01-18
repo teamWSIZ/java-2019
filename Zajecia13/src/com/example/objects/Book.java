@@ -1,10 +1,26 @@
 package com.example.objects;
 
 public class Book {
-    String title;
-    String author;
-    Integer pages;
-    Integer price;
+    private String title;
+    private String author;
+    private Integer pages;
+    private Integer price;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public Integer getPages() {
+        return pages;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
 
     private Book(){
     }
@@ -29,5 +45,7 @@ public class Book {
         System.out.println("Cena: "+price);
         System.out.println("_____________________");
     }
+
+
 
 }
