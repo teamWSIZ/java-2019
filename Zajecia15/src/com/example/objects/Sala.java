@@ -27,4 +27,8 @@ public class Sala {
     public void dodajGrupe(ArrayList<Student> studenci){
 
     }
+
+    public Double powierzchniaOkien(){
+        return 0.0;
+    }
 }

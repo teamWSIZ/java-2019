@@ -1,6 +1,6 @@
 package com.example.objects;
 
-public class Okno {
+public class Okno implements Comparable{
     private Double lenght;
     private Double width;
 
@@ -14,5 +14,10 @@ public class Okno {
         this.width = width;
 
         this.area = this.lenght*this.width;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
