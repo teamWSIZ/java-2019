@@ -4,12 +4,12 @@ public class Book {
     String title;
     String author;
     Integer pages;
-    Double price;
+    Integer price;
 
     private Book(){
     }
 
-    Book(String title, String author, Integer pages, Double price){
+    Book(String title, String author, Integer pages, Integer price){
         this.title = title;
         this.author = author;
         this.pages = pages;
