@@ -9,10 +9,10 @@ public class Okno {
     private Okno(){
     }
 
-    private Okno(Double length, Double width){
-        this.lenght = lenght;
+    public Okno(Double length, Double width){
+        this.lenght = length;
         this.width = width;
 
-        this.area = lenght*width;
+        this.area = this.lenght*this.width;
     }
 }

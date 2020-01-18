@@ -9,7 +9,7 @@ public class Sala {
     private ArrayList<Student> mStudenci = new ArrayList<>();
 
     public Sala(int ilosc_okien, int krzesla, int komputery){
-
+        mOkna.add(new Okno(2.5,2.0));
     }
 
     @Override
