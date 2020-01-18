@@ -9,7 +9,11 @@ public class Sala {
     private ArrayList<Student> mStudenci = new ArrayList<>();
 
     public Sala(int ilosc_okien, int krzesla, int komputery) {
-        mOkna.add(new Okno(2.5, 2.0));
+        for(int i=0;i<ilosc_okien;i++)
+            mOkna.add(new Okno(2.5, 2.0));
+
+        for(int i=0;i<krzesla;i++)
+            mKrzesla.add(new Krzeslo());
     }
 
     @Override
@@ -21,11 +25,11 @@ public class Sala {
     }
 
     public void dodajStudenta(Student student){
-
+        mStudenci.add(student);
     }
 
     public void dodajGrupe(ArrayList<Student> studenci){
-
+        mStudenci.addAll(studenci);
     }
 
     public Double powierzchniaOkien(){
