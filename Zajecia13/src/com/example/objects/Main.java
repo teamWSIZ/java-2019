@@ -43,7 +43,16 @@ public class Main {
             b0.printPrice();
         }
 
+        books.sort((o1, o2) -> {
+            if (o1.getPages() > o2.getPages())
+                return 1;
 
+            if (o2.getPages() > o1.getPages())
+                return -1;
+
+            return 0;
+        });
+        
     }
 
     public static void dodajKsiazki(ArrayList<Book> ksiazki, Integer no) {

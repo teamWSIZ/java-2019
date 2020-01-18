@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 	    ArrayList<Integer> tablica = new ArrayList<>();
-	    dodajLiczby(tablica,10);
 
+	    dodajLiczby(tablica,10);
 	    wyswietlTablice(tablica);
 
 	    tablica.sort(new Comparator<Integer>() {
