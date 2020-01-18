@@ -9,16 +9,14 @@ public class Main {
 	    System.out.println(sala41.toString());
         System.out.println(sala21.toString());
 
-        for(int i=0;i<20;i++)
-            sala41.dodajStudenta(new Student("Przemyslaw","Stoklosa",1));
-
-        rozpocznijWyklad();
+        rozpocznijWyklad(sala41);
 
         System.out.println(sala41.toString());
         System.out.println(sala21.toString());
     }
 
-    public static void rozpocznijWyklad(){
-
+    public static void rozpocznijWyklad(Sala sala){
+        for(int i=0;i<20;i++)
+            sala.dodajStudenta(new Student("Przemyslaw","Stoklosa",1));
     }
 }
