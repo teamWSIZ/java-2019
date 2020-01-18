@@ -18,6 +18,11 @@ public class Okno implements Comparable{
 
     @Override
     public int compareTo(Object o) {
+        if(area>((Okno)o).getArea())
+            return 1;
+        if(area<((Okno)o).getArea())
+            return -1;
+
         return 0;
     }
 
