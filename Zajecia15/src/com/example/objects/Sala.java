@@ -33,6 +33,11 @@ public class Sala {
     }
 
     public Double powierzchniaOkien(){
-        return 0.0;
+        double powierzchnia = 0;
+
+        for(Okno okno : mOkna)
+            powierzchnia+=okno.getArea();
+
+        return powierzchnia;
     }
 }
