@@ -16,7 +16,7 @@ public class Main {
         books.add(book);
         books.add(book1);
 
-        Scanner scanner  = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Ilość książek: ");
 
         dodajKsiazki(books, scanner.nextInt());
@@ -29,10 +29,10 @@ public class Main {
             @Override
             public int compare(Book o1, Book o2) {
 
-                if(o1.getPrice()>o2.getPrice())
+                if (o1.getPrice() > o2.getPrice())
                     return 1;
 
-                if(o2.getPrice()>o1.getPrice())
+                if (o2.getPrice() > o1.getPrice())
                     return -1;
 
                 return 0;
@@ -40,7 +40,7 @@ public class Main {
         });
 
         for (Book b0 : books) {
-            b0.print();
+            b0.printPrice();
         }
 
 
@@ -48,6 +48,6 @@ public class Main {
 
     public static void dodajKsiazki(ArrayList<Book> ksiazki, Integer no) {
         for (Integer i = 0; i < no; i++)
-            ksiazki.add(new Book("Java_" + i.toString(), "jakis autor", 200, (int)(Math.random()*20)+20));
+            ksiazki.add(new Book("Java_" + i.toString(), "jakis autor", 200, (int) (Math.random() * 20) + 20));
     }
 }

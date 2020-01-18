@@ -37,6 +37,10 @@ public class Book {
         return "Tytuł: "+title+" Autor: "+author+" Liczba stron: "+pages+" Cena: "+price;
     }
 
+    public void printPrice(){
+        System.out.println("Cena: "+price+" Tytuł:"+title);
+    }
+
     public void print(){
         System.out.println("_____________________");
         System.out.println("Tytuł: "+title);
