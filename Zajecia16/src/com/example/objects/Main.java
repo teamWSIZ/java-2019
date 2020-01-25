@@ -21,5 +21,8 @@ public class Main {
 
 	    prostokaty.add(new Prostokat(5,5));
 
+	    Prostokat prostokat = new Prostokat(5,10);
+	    System.out.println("Pole prostokata:"+prostokat.getPolePowierzchni());
+
     }
 }

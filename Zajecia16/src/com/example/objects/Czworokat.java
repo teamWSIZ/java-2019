@@ -3,7 +3,10 @@ package com.example.objects;
 public class Czworokat {
     double polePowierzchni = 0;
 
-    public double obliczPole(){
+    public void obliczPole(){
+    }
+
+    public double getPolePowierzchni(){
         return polePowierzchni;
     }
 

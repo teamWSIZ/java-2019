@@ -5,7 +5,14 @@ public class Prostokat extends Czworokat{
     double szerokosc = 0;
 
     Prostokat(double dlugosc, double szerokosc){
-
+        this.dlugosc = dlugosc;
+        this.szerokosc = szerokosc;
     }
+
+    @Override
+    public void obliczPole(){
+        polePowierzchni = dlugosc*szerokosc;
+    }
+
 
 }
