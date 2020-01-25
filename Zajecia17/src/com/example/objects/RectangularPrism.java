@@ -10,15 +10,21 @@ public class RectangularPrism extends Prism {
 
         evaluateField();
         evaluateVolume();
+
     }
 
     @Override
-    void evaluateField() {
-        this.field = a * b;
+    protected String info() {
+        return "Funkcja z RectangularPrism";
     }
 
     @Override
-    void evaluateVolume() {
+    protected void evaluateField() {
+        this.bottomField = a * b;
+    }
+
+    @Override
+    protected void evaluateVolume() {
         this.volume = a * b * c;
     }
 

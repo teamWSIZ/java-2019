@@ -1,17 +1,23 @@
 package com.example.objects;
 
 abstract public class Prism {
-    double field;
+    double bottomField;
     double volume;
 
-    abstract void evaluateField();
-    abstract void evaluateVolume();
+    abstract protected void evaluateField();
+    abstract protected void evaluateVolume();
 
     abstract String getFigureInfo();
 
+    protected String info(){
+        return "Prism - funkcja z klasy bazowej";
+    }
+
     void print(){
+        System.out.println(info());
+
         System.out.println(getFigureInfo());
-        System.out.println("Pole powierzchni: "+field);
+        System.out.println("Pole powierzchni: "+ bottomField);
         System.out.println("Objetosc: "+volume);
     }
 }

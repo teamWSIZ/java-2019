@@ -11,12 +11,12 @@ public class Cube extends Prism {
     }
 
     @Override
-    void evaluateField() {
-        this.field = a * a;
+    protected void evaluateField() {
+        this.bottomField = a * a;
     }
 
     @Override
-    void evaluateVolume() {
+    protected void evaluateVolume() {
         this.volume = a * a * a;
     }
 

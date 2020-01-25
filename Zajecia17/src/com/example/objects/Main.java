@@ -14,5 +14,8 @@ public class Main {
 
         for(Prism prism : mPrisms)
             prism.print();
+
+        RectangularPrism rp = new RectangularPrism(10,5,5);
+        
     }
 }
