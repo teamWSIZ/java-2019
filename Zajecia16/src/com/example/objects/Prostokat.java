@@ -7,6 +7,13 @@ public class Prostokat extends Czworokat{
     Prostokat(double dlugosc, double szerokosc){
         this.dlugosc = dlugosc;
         this.szerokosc = szerokosc;
+
+        obliczPole();
+    }
+
+    @Override
+    public boolean czyPoleZostaloZdefiniowane() {
+        return true;
     }
 
     @Override
