@@ -7,7 +7,16 @@ public class Czworokat {
         return polePowierzchni;
     }
 
+    public boolean czyPoleZostaloZdefiniowane(){
+        return false;
+    }
+
     public void wyswietl(){
-        System.out.println("Pole powierzchni: "+"pole powierzchni nie zostało zdefiniowane");
+        System.out.print("Pole powierzchni: ");
+
+        if(czyPoleZostaloZdefiniowane())
+            System.out.println(polePowierzchni);
+        else
+            System.out.println("pole powierzchni nie zostało zdefiniowane");
     }
 }
