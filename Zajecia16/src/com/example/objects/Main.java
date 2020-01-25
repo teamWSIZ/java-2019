@@ -19,6 +19,8 @@ public class Main {
 	    for(Czworokat c : czworokaty)
 	        c.wyswietl();
 
+	    czworokaty.add(new Kwadrat(20));
+
 	    prostokaty.add(new Prostokat(5,5));
 
 	    Prostokat prostokat = new Prostokat(5,10);
