@@ -9,6 +9,9 @@ public class Main {
         mPrisms.add(new RectangularPrism(5,5,5));
         mPrisms.add(new RectangularPrism(10,5,5));
 
+        mPrisms.add(new Cube(5));
+        mPrisms.add(new Cube(10));
+
         for(Prism prism : mPrisms)
             prism.print();
     }
