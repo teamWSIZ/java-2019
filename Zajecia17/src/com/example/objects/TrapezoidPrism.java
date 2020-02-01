@@ -3,8 +3,6 @@ package com.example.objects;
 public class TrapezoidPrism extends Prism {
 
     double a, b, h, H;
-    double bottomField;
-    double volume;
 
     TrapezoidPrism(double a, double b, double h, double H) {
         this.a = a;
