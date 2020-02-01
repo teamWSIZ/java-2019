@@ -12,6 +12,8 @@ public class Main {
         mPrisms.add(new Cube(5));
         mPrisms.add(new Cube(10));
 
+        mPrisms.add(new TrapezoidPrism(5,5,5,10));
+
         for(Prism prism : mPrisms)
             prism.print();
 

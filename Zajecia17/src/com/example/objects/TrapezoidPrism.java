@@ -18,7 +18,7 @@ public class TrapezoidPrism extends Prism {
 
     @Override
     protected void evaluateBottomField() {
-        bottomField = 1.0 / 2.0 * (a + b) / h;
+        bottomField = 1.0 / 2.0 * (a + b) * h;
     }
 
     @Override
