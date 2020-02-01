@@ -8,7 +8,7 @@ public class RectangularPrism extends Prism {
         this.b = b;
         this.c = c;
 
-        evaluateField();
+        evaluateBottomField();
         evaluateVolume();
 
     }
@@ -19,7 +19,7 @@ public class RectangularPrism extends Prism {
     }
 
     @Override
-    protected void evaluateField() {
+    protected void evaluateBottomField() {
         this.bottomField = a * b;
     }
 

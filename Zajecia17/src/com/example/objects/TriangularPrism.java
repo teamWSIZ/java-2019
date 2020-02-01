@@ -8,12 +8,12 @@ public class TriangularPrism extends Prism {
         this.a = a;
         this.h = h;
 
-        evaluateField();
+        evaluateBottomField();
         evaluateVolume();
     }
 
     @Override
-    protected void evaluateField() {
+    protected void evaluateBottomField() {
         bottomField = a * a * Math.sqrt(3.0) / 4.0;
     }
 

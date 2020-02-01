@@ -4,7 +4,7 @@ abstract public class Prism {
     double bottomField;
     double volume;
 
-    abstract protected void evaluateField();
+    abstract protected void evaluateBottomField();
     abstract protected void evaluateVolume();
 
     abstract String getFigureInfo();
