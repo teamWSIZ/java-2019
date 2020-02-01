@@ -10,7 +10,7 @@ public class TrapezoidPrism extends Prism {
         this.a = a;
         this.b = b;
         this.h = h;
-        this.H = h;
+        this.H = H;
 
         evaluateBottomField();
         evaluateVolume();
