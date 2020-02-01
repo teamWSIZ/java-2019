@@ -18,6 +18,15 @@ public class Main {
         naczynia.add(new Talez());
 
         uzyj(narzedzia);
+
+        ArrayList<Wyczysc> przedmioty = new ArrayList<>();
+
+        for(NarzedzieTnace narzedzie : narzedzia)
+            przedmioty.add((Wyczysc)narzedzie);
+
+        naczynia.forEach(naczynie -> przedmioty.add((Wyczysc)naczynie));
+
+        wyczysc(przedmioty);
     }
 
     public static void uzyj(ArrayList<NarzedzieTnace> narzedzia){
@@ -25,6 +34,11 @@ public class Main {
     }
 
     public static void wyczysc(ArrayList<Wyczysc> przedmioty){
-
+        for(Wyczysc przedmiot : przedmioty) {
+            przedmiot.uzyjPlynuDoCzyszczenia();
+            przedmiot.przepluczWoda();
+            przedmiot.wypoleruj();
+            przedmiot.przepluczWoda();
+        }
     }
 }
