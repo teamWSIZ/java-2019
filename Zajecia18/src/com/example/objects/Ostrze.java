@@ -7,7 +7,7 @@ public class Ostrze {
         this.dlugosc = dlugosc;
     }
 
-    public double getDlugosc(){
+    public double getDlugosc() {
         return dlugosc;
     }
 }
