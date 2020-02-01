@@ -23,6 +23,11 @@ public class TriangularPrism extends Prism {
     }
 
     @Override
+    protected void evaluateField() {
+
+    }
+
+    @Override
     String getFigureInfo() {
         return "Triangular prism";
     }

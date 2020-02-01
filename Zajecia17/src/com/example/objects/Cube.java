@@ -21,6 +21,11 @@ public class Cube extends Prism {
     }
 
     @Override
+    protected void evaluateField() {
+        field = 6*a*a;
+    }
+
+    @Override
     String getFigureInfo() {
         return "Cube";
     }

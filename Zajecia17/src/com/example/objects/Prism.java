@@ -3,6 +3,7 @@ package com.example.objects;
 abstract public class Prism {
     double bottomField;
     double volume;
+    double field;
 
     abstract protected void evaluateBottomField();
     abstract protected void evaluateVolume();
@@ -19,7 +20,8 @@ abstract public class Prism {
         System.out.println(info());
 
         System.out.println(getFigureInfo());
-        System.out.println("Pole powierzchni: "+ bottomField);
+        System.out.println("Pole powierzchni podstawy: "+ bottomField);
+        System.out.println("Pole powierzchni graniastosłupa: "+ field);
         System.out.println("Objetosc: "+volume);
     }
 }

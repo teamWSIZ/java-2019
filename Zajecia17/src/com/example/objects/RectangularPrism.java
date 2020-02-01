@@ -29,6 +29,11 @@ public class RectangularPrism extends Prism {
     }
 
     @Override
+    protected void evaluateField() {
+
+    }
+
+    @Override
     String getFigureInfo() {
         return "Rectangular Prism";
     }

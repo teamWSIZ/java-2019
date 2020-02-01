@@ -25,6 +25,11 @@ public class TrapezoidPrism extends Prism {
     }
 
     @Override
+    protected void evaluateField() {
+
+    }
+
+    @Override
     String getFigureInfo() {
         return "Trapezoid Prism";
     }
