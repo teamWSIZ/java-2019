@@ -19,6 +19,6 @@ public class Garnek extends Naczynie implements Wyczysc, Sprzedaj{
 
     @Override
     public void reklamuj() {
-
+        System.out.println("Reklamuję garnek");
     }
 }

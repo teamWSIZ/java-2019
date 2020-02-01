@@ -3,7 +3,7 @@ package com.example.objects;
 public class Lopata extends NarzedzieTnace implements Wyczysc{
     @Override
     boolean uzyj() {
-        System.out.println("Kopie rowy");
+        System.out.println(getClass().getSimpleName()+": Kopie rowy");
         return true;
     }
 
