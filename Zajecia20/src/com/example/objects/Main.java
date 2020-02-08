@@ -10,8 +10,18 @@ public class Main {
         double dzialanie(double x);
     }
 
-    public static void main(String[] args) {
+    @FunctionalInterface
+    interface kolejneDzialanie{
 
+    }
+
+    public static void main(String[] args) {
+        wyswietlDzialanie("Kwadrat",10,x->x*x);
+
+        wyswietlDzialanie("Sześcian",10,x->{
+            System.out.println("....obliczam....");
+            return x*x*x;
+        });
     }
 
     public static void wyswietlDzialanie(String nazwa, double x, dzialania dz){
