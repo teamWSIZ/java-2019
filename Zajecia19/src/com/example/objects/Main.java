@@ -12,6 +12,16 @@ public class Main {
             mTablica.add((double)i);
 
         wyswietlTablice(mTablica);
+
+        mTablica.forEach(e -> System.out.println("element="+e));
+
+        System.out.println("__________________________");
+
+        mTablica.forEach(e -> {
+            if(e%2==0)
+                System.out.println("element="+e);
+
+        });
     }
 
     public static void wyswietlTablice(@NotNull ArrayList<Double> t){
