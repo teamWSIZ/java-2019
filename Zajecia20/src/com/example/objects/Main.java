@@ -44,10 +44,19 @@ public class Main {
         dzialania d1 = (t)->t*t;
         dzialania d2 = t->10;
         dzialania d3 = t->{return 10;};
+
         dzialania d4 = t->{
             System.out.println("Funkcja...");
             return t*t;
         };
+
+        ArrayList<dzialania> tablicaZFunkcjami = new ArrayList<>();
+
+        tablicaZFunkcjami.add(d1);
+        tablicaZFunkcjami.addAll(Arrays.asList(d1,d2,d3,d4));
+
+        tablicaZFunkcjami.get(0).dzialanie(5);
+        tablicaZFunkcjami.forEach(funkcja->funkcja.dzialanie(5));
 
         kolejneDzialanie d10 = (a,b,c,d)->a+b+c+d;
 
