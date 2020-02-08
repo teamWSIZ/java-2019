@@ -1,8 +1,12 @@
 package com.example.objects;
 
 import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
+
+@FunctionalInterface
+interface simpleLambda{
+    double dzialanie(double a, double b);
+}
 
 public class Main {
     static ArrayList<Double> mTablica = new ArrayList<>();
@@ -22,6 +26,14 @@ public class Main {
                 System.out.println("element="+e);
 
         });
+
+        double wynik = wykonajDzialanie(10,10,(x,y)->{
+            return x+y;
+        });
+
+        System.out.println("Wynik: "+wynik);
+
+
     }
 
     public static void wyswietlTablice(@NotNull ArrayList<Double> t){
@@ -36,5 +48,12 @@ public class Main {
         }
 
         System.out.println("]");
+
     }
+
+    public static double wykonajDzialanie(double a, double b, simpleLambda naszaLambda){
+        return naszaLambda.dzialanie(a,b);
+    }
+
+
 }
