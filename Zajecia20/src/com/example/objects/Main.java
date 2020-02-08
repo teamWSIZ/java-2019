@@ -27,6 +27,20 @@ public class Main {
 
         wyswietlDzialanie("dodaj elementy", 10, (a, b, c, d) -> a + b + c + d);
 
+        dzialania d0 = t->t*t;
+        dzialania d1 = (t)->t*t;
+        dzialania d2 = t->10;
+        dzialania d3 = t->{return 10;};
+        dzialania d4 = t->{
+            System.out.println("Funkcja...");
+            return t*t;
+        };
+
+        kolejneDzialanie d10 = (a,b,c,d)->a+b+c+d;
+
+
+        System.out.println("Wynik: "+d0.dzialanie(10));
+
 
     }
 
