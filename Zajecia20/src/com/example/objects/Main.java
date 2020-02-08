@@ -65,7 +65,6 @@ public class Main {
         System.out.println("Wynik: "+d0.dzialanie(10));
         System.out.println(dzialanieT.f_tab(tablica));
 
-
     }
 
     public static void wyswietlDzialanie(String nazwa, double x, dzialania dz) {
