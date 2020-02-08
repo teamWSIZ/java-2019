@@ -11,10 +11,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-	// write your code here
+
     }
 
-    public static void wyswietlDzialanie(double x, dzialania dz){
-        System.out.println("Wynik działania:"+dz.dzialanie(x));
+    public static void wyswietlDzialanie(String nazwa, double x, dzialania dz){
+        System.out.println(nazwa+" : "+dz.dzialanie(x));
     }
 }
