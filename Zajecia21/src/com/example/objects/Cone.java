@@ -7,6 +7,8 @@ public class Cone extends Figure3D implements Material{
     Cone(double r, double h){
         this.h = h;
         bottom = new Bottom(Math.PI*r*r);
+
+        evaluateVolume();
     }
 
     @Override
@@ -22,5 +24,10 @@ public class Cone extends Figure3D implements Material{
     @Override
     public double getPrice() {
         return unitPrice*volume;
+    }
+
+    @Override
+    public void printPrice() {
+        System.out.println("Price: "+getPrice());
     }
 }

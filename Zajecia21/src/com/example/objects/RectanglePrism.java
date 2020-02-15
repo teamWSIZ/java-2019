@@ -4,6 +4,8 @@ public class RectanglePrism extends Figure3D{
     RectanglePrism(double a,double b, double h){
         bottom = new Bottom(a*b);
         this.h = h;
+
+        evaluateVolume();
     }
 
     @Override
