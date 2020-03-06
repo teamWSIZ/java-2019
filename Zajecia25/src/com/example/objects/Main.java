@@ -8,12 +8,17 @@ public class Main {
         // write your code here
         ArrayList<Student> student = new ArrayList<>();
 
-        student.add(new Student("Przemysław", "Stokłosa"));
+        Student przemyslaw = new Student("Przemysław", "Stokłosa");
+        student.add(przemyslaw);
+
         student.add(new Student("Jan", "Kowalski"));
         student.add(new Student("Przemysław", "Stokłosa"));
         student.add(new Student("Jan", "Kowalski"));
 
+
         printStudents(student);
+
+        Student.printDatabaseSize();
     }
 
     static void printStudents(ArrayList<Student> students) {
