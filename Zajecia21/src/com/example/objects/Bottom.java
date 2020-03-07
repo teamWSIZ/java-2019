@@ -1,6 +1,7 @@
 package com.example.objects;
 
 public class Bottom {
+
     private double field;
 
     Bottom(double field){
