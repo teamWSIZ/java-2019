@@ -29,7 +29,6 @@ public class App extends Application {
         //TODO
         //group.getChildren().add(createTriangle(xCenter, yCenter));
 
-
         //TODO po wykonaniu ćwiczenień proszę włączyć kod obiektowy
         //for(int i = 0; i<10;i++)
           //  new FigureRectangle(group, new Rectangle());
@@ -68,7 +67,7 @@ public class App extends Application {
         //TODO
         //Proszę uzupełnić funkcję tak, żeby generowała losowe trójkąty równoboczne
 
-        Double points[] = new Double[]{
+        Double[] points = new Double[]{
                 0.0,0.0,
                 100.0,0.0,
                 100.0,100.0
