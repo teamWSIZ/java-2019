@@ -6,7 +6,6 @@ package com.javafx.example;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
@@ -34,7 +33,6 @@ public class App extends Application {
         //TODO po wykonaniu ćwiczenień proszę włączyć kod obiektowy
         //for(int i = 0; i<10;i++)
           //  new FigureRectangle(group, new Rectangle());
-
 
     }
 
