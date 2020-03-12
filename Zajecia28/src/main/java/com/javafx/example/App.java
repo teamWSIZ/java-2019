@@ -30,7 +30,7 @@ public class App extends Application {
         //group.getChildren().add(createTriangle(xCenter, yCenter));
 
         //TODO po wykonaniu ćwiczenień proszę włączyć kod obiektowy
-        //for(int i = 0; i<10;i++)
+        //for(int i = 0; i<100;i++)
           //  new FigureRectangle(group, new Rectangle());
 
     }
