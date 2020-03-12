@@ -23,6 +23,7 @@ public class Main extends Application{
         primaryStage.show();
 
         Rectangle rect = new Rectangle(100,100);
+
         rect.setFill(Color.CADETBLUE);
         rect.setX(200);
         rect.setY(200);
