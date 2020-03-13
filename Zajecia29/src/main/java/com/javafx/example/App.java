@@ -22,12 +22,19 @@ public class App extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        //TODO
+        //ćwiczenie 1: proszę zastąpić kod klasą AnimatedFigure
         for(int i = 0; i<100;i++) {
             FigureRectangle fr = new FigureRectangle(group, new Rectangle());
             RotateTransition rt = rotation();
             rt.setNode(fr.getShape());
             rt.play();
         }
+
+        //ćwiczenie 2: proszę uzupełnić kod o animowane trójkąty
+        //ćwiczenie 3: proszę dodać klawisz pozwalający na uruchomienie wszystkich animacji
+
+        //ćwiczenie 4: proszę dodać kilka dodatkowych animacji
 
     }
 
