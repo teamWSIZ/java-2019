@@ -1,10 +1,10 @@
-package com.javafx.example;
+package com.javafx.example.figures;
 
 import javafx.scene.Group;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 
-public class FigureTriangle extends Figure{
+public class FigureTriangle extends Figure {
     //TODO
     //proszę uzupełnić odpowiednią klasę
     Polygon polygon;

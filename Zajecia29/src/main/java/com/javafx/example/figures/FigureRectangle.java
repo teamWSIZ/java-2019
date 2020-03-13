@@ -1,15 +1,15 @@
-package com.javafx.example;
+package com.javafx.example.figures;
 
 import javafx.scene.Group;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
-public class FigureRectangle extends Figure{
+public class FigureRectangle extends Figure {
     Rectangle rectangle;
     double xCenter;
     double yCenter;
 
-    FigureRectangle(Group group, Rectangle rectangle){
+    public FigureRectangle(Group group, Rectangle rectangle){
         //Ta funkcja wywołuje konstruktor klasy nadrzędnej
         super(group);
 

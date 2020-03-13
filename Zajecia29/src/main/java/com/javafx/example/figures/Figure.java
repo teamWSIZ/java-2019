@@ -1,4 +1,4 @@
-package com.javafx.example;
+package com.javafx.example.figures;
 
 import javafx.scene.Group;
 import javafx.scene.shape.Shape;
