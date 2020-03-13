@@ -6,11 +6,12 @@ import javafx.scene.paint.Color;
 
 public class RandomHelper {
     public static double randomTranslation() {
+
         return (Math.random() * 400 - 200);
     }
 
     public static double randomDimension() {
-        //Funkcja generuje liczbę z przedziału [20,100]
+        //Funkcja generuje liczbę z przedziału [10,50]
         return Math.random() * 40 + 10;
     }
 

@@ -27,11 +27,13 @@ public class App extends Application {
         group.getChildren().add(createSquare(xCenter, yCenter));
 
         //TODO
-        //group.getChildren().add(createTriangle(xCenter, yCenter));
+        //for(int i=0;i<100;i++)
+            group.getChildren().add(createTriangle(xCenter, yCenter));
 
         //TODO po wykonaniu ćwiczenień proszę włączyć kod obiektowy
         //for(int i = 0; i<100;i++)
           //  new FigureRectangle(group, new Rectangle());
+
 
     }
 
@@ -55,8 +57,8 @@ public class App extends Application {
         //TODO Po usunięciu komentarzy prostokąt zostanie rozmieszczony
         //w losowych miejscach ekranu
 
-        rectangle.setTranslateX(xcenter + RandomHelper.randomTranslation());
-        rectangle.setTranslateY(ycenter + RandomHelper.randomTranslation());
+        //rectangle.setTranslateX(xcenter + RandomHelper.randomTranslation());
+        //rectangle.setTranslateY(ycenter + RandomHelper.randomTranslation());
 
         return rectangle;
     }
@@ -67,13 +69,20 @@ public class App extends Application {
         //TODO
         //Proszę uzupełnić funkcję tak, żeby generowała losowe trójkąty równoboczne
 
+        double a = RandomHelper.randomDimension();
+        double h = Math.sqrt(3.0)/2.0*a;
+
         Double[] points = new Double[]{
                 0.0,0.0,
-                100.0,0.0,
-                100.0,100.0
+                a,0.0,
+                a/2.0,h
         };
 
+        polygon.setFill(RandomHelper.randomColor());
         polygon.getPoints().addAll(points);
+
+        polygon.setTranslateX(xcenter + RandomHelper.randomTranslation());
+        polygon.setTranslateY(ycenter + RandomHelper.randomTranslation());
 
         return polygon;
     }
