@@ -13,6 +13,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.util.ArrayList;
+
 public class App extends Application {
 
     @Override
@@ -26,11 +28,14 @@ public class App extends Application {
         //TODO
         //ćwiczenie 1: proszę zastąpić kod klasą AnimatedFigure
         for(int i = 0; i<10;i++) {
-            FigureRectangle fr = new FigureRectangle(group, new Rectangle());
-            FigureTriangle ft = new FigureTriangle(group);
-            RotateTransition rt = rotation();
-            rt.setNode(fr.getShape());
-            rt.play();
+            AnimatedFigure<FigureRectangle> ar =
+                    new AnimatedFigure<>(new FigureRectangle(group, new Rectangle()),rotation());
+            ar.play();
+
+            AnimatedFigure<FigureTriangle> at =
+                    new AnimatedFigure<>(new FigureTriangle(group),rotation());
+
+            at.play();
         }
 
         //ćwiczenie 2: proszę uzupełnić kod o animowane trójkąty
@@ -44,7 +49,7 @@ public class App extends Application {
         RotateTransition rotateTransition = new RotateTransition();
         rotateTransition.setFromAngle(0);
         rotateTransition.setToAngle(360);
-        rotateTransition.setDuration(Duration.seconds(1+Math.random()*19));
+        rotateTransition.setDuration(Duration.seconds(1+Math.random()*4));
         rotateTransition.setAutoReverse(true);
         rotateTransition.setCycleCount(10);
 
