@@ -4,6 +4,7 @@
 package com.javafx.example;
 
 import com.javafx.example.figures.FigureRectangle;
+import com.javafx.example.figures.FigureTriangle;
 import javafx.animation.RotateTransition;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -24,8 +25,9 @@ public class App extends Application {
 
         //TODO
         //ćwiczenie 1: proszę zastąpić kod klasą AnimatedFigure
-        for(int i = 0; i<100;i++) {
+        for(int i = 0; i<10;i++) {
             FigureRectangle fr = new FigureRectangle(group, new Rectangle());
+            FigureTriangle ft = new FigureTriangle(group);
             RotateTransition rt = rotation();
             rt.setNode(fr.getShape());
             rt.play();

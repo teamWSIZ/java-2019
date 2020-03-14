@@ -6,7 +6,7 @@ import javafx.scene.shape.Shape;
 abstract public class Figure {
     Group group;
 
-    Figure(Group group){
+    public Figure(Group group){
         this.group = group;
     }
 
