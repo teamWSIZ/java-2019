@@ -1,0 +1,84 @@
+import java.util.*;
+
+class Figure{
+    Integer color = 0;
+
+    Figure(Integer color){
+        this.color = color;
+    }
+
+    //ćwiczenie 2:
+    //napisać metodę toString()
+
+    //ćwiczenie 3
+    //usupełnić klasę tak, żeby kolekcja set używała koloru
+}
+
+public class App {
+    ArrayList<Integer> arrayList = new ArrayList<>();
+    Set<Integer> set = new HashSet<>();
+    Deque<Integer> deque = new ArrayDeque<>();
+    Set<Figure> setFigures = new HashSet<>();
+
+    public static void main(String[] args) {
+        App app = new App();
+
+        app.arrayListExample();
+        //app.setExample();
+        //app.dequeExample();
+        //app.ownSetExample();
+    }
+
+    public void addElements(Collection<Integer> collection, int n){
+
+        /*ćwiczenie 1: proszę uzupełnić metodę tak, żeby dodawała do
+            kolekcji elementy od 1 do 10 o krotności n
+            np [1,1,2,2,3,3,4,4..]
+         */
+    }
+
+    public void arrayListExample(){
+        for(int i=0;i<10;i++) {
+            arrayList.add(i);
+            arrayList.add(i);
+        }
+
+        System.out.println("ArrayList: "+ arrayList.toString());
+    }
+
+    public void setExample(){
+        addElements(set,2);
+
+        System.out.println("Set: "+ set.toString());
+    }
+
+    public void dequeExample(){
+        addElements(deque,2);
+
+        System.out.println("Deque: "+deque.toString());
+        deque.poll();
+        System.out.println("Deque: "+deque.toString());
+    }
+
+    public void ownSetExample(){
+        //ćwiczeni4: proszę uzupełnić metodę tak, żeby używała klasy Figure
+
+        System.out.println("Own set: "+setFigures.toString());
+    }
+
+    public void iteratorExample(Collection<Integer> collection){
+        Iterator<Integer> iterator = collection.iterator();
+
+        while(iterator.hasNext()){
+            Integer element = iterator.next();
+            System.out.println(element);
+        }
+
+        //Jeżeli klasa posiada iterator można użyć pętli for
+        //ćwiczenie 5: proszę użyć pętli for dla klasy MyCollection
+
+        for(Integer element: collection){
+            System.out.println(element);
+        }
+    }
+}
