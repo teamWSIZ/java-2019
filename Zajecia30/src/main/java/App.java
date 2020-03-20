@@ -21,6 +21,14 @@ class Figure {
     //ćwiczenie 2:
     //napisać metodę toString()
 
+    @Override
+    public String toString() {
+        return "Figure{" +
+                "color=" + color +
+                '}';
+    }
+
+
     //ćwiczenie 3
     //usupełnić klasę tak, żeby kolekcja set używała koloru
 }
@@ -40,12 +48,12 @@ public class App {
 
         app.iteratorsExamples();
 
-        System.out.println("MyCollection:");
+        /*System.out.println("MyCollection:");
 
         MyCollection myCollection = new MyCollection();
         for(Integer element: myCollection){
             System.out.println("element: "+element);
-        }
+        }*/
 
         //app.dequeExample();
         app.ownSetExample();
@@ -87,7 +95,19 @@ public class App {
     public void ownSetExample() {
         //ćwiczeni4: proszę uzupełnić metodę tak, żeby używała klasy Figure
 
-        System.out.println("Own set: " + setFigures.toString());
+        setFigures.add(new Figure(1));
+        setFigures.add(new Figure(1));
+        setFigures.add(new Figure(1));
+        setFigures.add(new Figure(2));
+        setFigures.add(new Figure(1));
+
+        setFigures.add(new Figure(4));
+        setFigures.add(new Figure(5));
+        setFigures.add(new Figure(5));
+        setFigures.add(new Figure(5));
+        setFigures.add(new Figure(5));
+
+        System.out.println("Own set: " + setFigures);
     }
 
     public void iteratorsExamples(){
@@ -109,25 +129,4 @@ public class App {
         }
     }
 
-    public void collections() {
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            arrayList.add(i);
-            arrayList.add(i);
-        }
-
-        System.out.println(arrayList);
-
-
-        Set<Integer> set = new HashSet<>();
-        for (int i = 0; i < 10; i++) {
-            set.add(i);
-            set.add(i);
-        }
-
-        System.out.println(set);
-
-
-        Deque<Integer> deque = new ArrayDeque<>();
-    }
 }
