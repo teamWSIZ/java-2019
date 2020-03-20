@@ -28,6 +28,7 @@ public class App {
     Set<Integer> set = new HashSet<>();
     Deque<Integer> deque = new ArrayDeque<>();
     Set<Figure> setFigures = new HashSet<>();
+    MyCollection myCollection = new MyCollection();
 
     public static void main(String[] args) {
         App app = new App();
@@ -36,6 +37,13 @@ public class App {
         app.setExample();
 
         app.iteratorsExamples();
+
+        System.out.println("MyCollection:");
+
+        MyCollection myCollection = new MyCollection();
+        for(Integer element: myCollection){
+            System.out.println("element: "+element);
+        }
 
         //app.dequeExample();
         //app.ownSetExample();
@@ -81,16 +89,15 @@ public class App {
     }
 
     public void iteratorsExamples(){
-        iteratorExample(arrayList);
     }
 
     public void iteratorExample(Collection<Integer> collection) {
         Iterator<Integer> iterator = collection.iterator();
 
-        while (iterator.hasNext()) {
+        /*while (iterator.hasNext()) {
             Integer element = iterator.next();
             System.out.println(element);
-        }
+        }*/
 
         //Jeżeli klasa posiada iterator można użyć pętli for
         //ćwiczenie 5: proszę użyć pętli for dla klasy MyCollection
