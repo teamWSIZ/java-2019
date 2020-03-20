@@ -9,12 +9,14 @@ class Figure {
 
     @Override
     public boolean equals(Object o) {
-        return true;
+
+        Figure figure = (Figure) o;
+        return color.equals(figure.color);
     }
 
     @Override
     public int hashCode() {
-        return color != null ? color.hashCode() : 0;
+        return color.hashCode();
     }
     //ćwiczenie 2:
     //napisać metodę toString()
@@ -46,7 +48,7 @@ public class App {
         }
 
         //app.dequeExample();
-        //app.ownSetExample();
+        app.ownSetExample();
     }
 
     public void addElements(Collection<Integer> collection, int n) {
