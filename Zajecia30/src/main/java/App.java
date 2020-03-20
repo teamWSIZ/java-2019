@@ -7,6 +7,15 @@ class Figure{
         this.color = color;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return color != null ? color.hashCode() : 0;
+    }
     //ćwiczenie 2:
     //napisać metodę toString()
 
@@ -33,17 +42,18 @@ public class App {
 
         /*ćwiczenie 1: proszę uzupełnić metodę tak, żeby dodawała do
             kolekcji elementy od 1 do 10 o krotności n
-            np [1,1,2,2,3,3,4,4..]
+            np n=2 [1,1,2,2,3,3,4,4..]
          */
+
+        for(int i=0;i<10;i++){
+            collection.add(i);
+        }
     }
 
     public void arrayListExample(){
-        for(int i=0;i<10;i++) {
-            arrayList.add(i);
-            arrayList.add(i);
-        }
+        addElements(arrayList,5);
 
-        System.out.println("ArrayList: "+ arrayList.toString());
+        System.out.println("ArrayList: "+ arrayList);
     }
 
     public void setExample(){
@@ -80,5 +90,27 @@ public class App {
         for(Integer element: collection){
             System.out.println(element);
         }
+    }
+
+    public void collections(){
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for(int i=0;i<10;i++){
+            arrayList.add(i);
+            arrayList.add(i);
+        }
+
+        System.out.println(arrayList);
+
+
+        Set<Integer> set = new HashSet<>();
+        for(int i=0;i<10;i++){
+            set.add(i);
+            set.add(i);
+        }
+
+        System.out.println(set);
+
+
+        Deque<Integer> deque = new ArrayDeque<>();
     }
 }
