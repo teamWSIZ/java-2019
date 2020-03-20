@@ -1,9 +1,9 @@
 import java.util.*;
 
-class Figure{
+class Figure {
     Integer color = 0;
 
-    Figure(Integer color){
+    Figure(Integer color) {
         this.color = color;
     }
 
@@ -33,53 +33,54 @@ public class App {
         App app = new App();
 
         app.arrayListExample();
-        //app.setExample();
+        app.setExample();
         //app.dequeExample();
         //app.ownSetExample();
     }
 
-    public void addElements(Collection<Integer> collection, int n){
+    public void addElements(Collection<Integer> collection, int n) {
 
         /*ćwiczenie 1: proszę uzupełnić metodę tak, żeby dodawała do
             kolekcji elementy od 1 do 10 o krotności n
             np n=2 [1,1,2,2,3,3,4,4..]
          */
 
-        for(int i=0;i<10;i++){
-            collection.add(i);
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < n; j++)
+                collection.add(i);
         }
     }
 
-    public void arrayListExample(){
-        addElements(arrayList,5);
+    public void arrayListExample() {
+        addElements(arrayList, 5);
 
-        System.out.println("ArrayList: "+ arrayList);
+        System.out.println("ArrayList: " + arrayList);
     }
 
-    public void setExample(){
-        addElements(set,2);
+    public void setExample() {
+        addElements(set, 5);
 
-        System.out.println("Set: "+ set.toString());
+        System.out.println("Set: " + set);
     }
 
-    public void dequeExample(){
-        addElements(deque,2);
+    public void dequeExample() {
+        addElements(deque, 2);
 
-        System.out.println("Deque: "+deque.toString());
+        System.out.println("Deque: " + deque.toString());
         deque.poll();
-        System.out.println("Deque: "+deque.toString());
+        System.out.println("Deque: " + deque.toString());
     }
 
-    public void ownSetExample(){
+    public void ownSetExample() {
         //ćwiczeni4: proszę uzupełnić metodę tak, żeby używała klasy Figure
 
-        System.out.println("Own set: "+setFigures.toString());
+        System.out.println("Own set: " + setFigures.toString());
     }
 
-    public void iteratorExample(Collection<Integer> collection){
+    public void iteratorExample(Collection<Integer> collection) {
         Iterator<Integer> iterator = collection.iterator();
 
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Integer element = iterator.next();
             System.out.println(element);
         }
@@ -87,14 +88,14 @@ public class App {
         //Jeżeli klasa posiada iterator można użyć pętli for
         //ćwiczenie 5: proszę użyć pętli for dla klasy MyCollection
 
-        for(Integer element: collection){
+        for (Integer element : collection) {
             System.out.println(element);
         }
     }
 
-    public void collections(){
+    public void collections() {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             arrayList.add(i);
             arrayList.add(i);
         }
@@ -103,7 +104,7 @@ public class App {
 
 
         Set<Integer> set = new HashSet<>();
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             set.add(i);
             set.add(i);
         }
