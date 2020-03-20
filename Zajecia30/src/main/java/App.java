@@ -34,6 +34,9 @@ public class App {
 
         app.arrayListExample();
         app.setExample();
+
+        app.iteratorsExamples();
+
         //app.dequeExample();
         //app.ownSetExample();
     }
@@ -75,6 +78,10 @@ public class App {
         //ćwiczeni4: proszę uzupełnić metodę tak, żeby używała klasy Figure
 
         System.out.println("Own set: " + setFigures.toString());
+    }
+
+    public void iteratorsExamples(){
+        iteratorExample(arrayList);
     }
 
     public void iteratorExample(Collection<Integer> collection) {
