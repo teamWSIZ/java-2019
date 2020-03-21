@@ -11,14 +11,17 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class App extends Application {
     ArrayList<Figure> figures = new ArrayList<>();
     ArrayList<Figure> figuresToDraw = new ArrayList<>();
+
+    Set<Figure> figuresSet = new HashSet<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
