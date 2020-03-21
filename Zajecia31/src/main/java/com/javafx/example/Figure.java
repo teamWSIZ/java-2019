@@ -1,19 +1,38 @@
 package com.javafx.example;
 
+import javafx.scene.Group;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Shape;
 
 class Figure {
     final Color color;
     final float xPositon;
     final float yPositon;
 
+    final Circle circle;
+
     Figure(Color color){
         //proszę zwrócić uwagę, że w konstruktorze można przypicać wartość
         //do stałej!
         this.color = color;
 
-        xPositon = 100;
-        yPositon = 100;
+        xPositon = (float)(Math.random()*200+50);
+        yPositon = (float)(Math.random()*200+50);
+
+        circle = new Circle();
+        circle.setFill(this.color);
+        circle.setRadius(Math.random()*50+10);
+        circle.setCenterX(xPositon);
+        circle.setCenterY(yPositon);
+    }
+
+    public void draw(Group group){
+        group.getChildren().add(circle);
+    }
+
+    public Shape getShape(){
+        return circle;
     }
 }
 

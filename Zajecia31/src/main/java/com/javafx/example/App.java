@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -34,7 +35,12 @@ public class App extends Application {
         });
 
         arrayList.setOnMouseClicked(e->{
-            drawArrayList();
+            drawArrayList(group);
+            /*Circle circle = new Circle();
+            circle.setRadius(50);
+            circle.setCenterX(100);
+            circle.setCenterY(100);
+            group.getChildren().add(circle);*/
         });
 
         HBox hBox = new HBox();
@@ -57,9 +63,13 @@ public class App extends Application {
         }
     }
 
-    void drawArrayList(){
+    void drawArrayList(Group group){
         figuresToDraw.removeAll(figuresToDraw);
         figuresToDraw.addAll(figures);
+
+        group.getChildren().removeAll(group.getChildren());
+
+        figuresToDraw.forEach(figure->figure.draw(group));
     }
 
     Button createButton(String text){
