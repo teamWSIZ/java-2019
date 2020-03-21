@@ -58,7 +58,8 @@ public class App extends Application {
 
     void generate(){
         for(int i=0;i<100;i++){
-            Figure figure = new Figure(Color.BLUE);
+            Color c1 = Color.color(Math.random(),Math.random(),Math.random());
+            Figure figure = new Figure(c1);
             figures.add(figure);
         }
     }

@@ -21,6 +21,7 @@ class Figure {
         yPositon = (float)(Math.random()*200+50);
 
         circle = new Circle();
+
         circle.setFill(this.color);
         circle.setRadius(Math.random()*50+10);
         circle.setCenterX(xPositon);
