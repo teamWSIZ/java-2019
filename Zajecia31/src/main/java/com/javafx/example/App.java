@@ -57,7 +57,7 @@ public class App extends Application {
     }
 
     void generate(){
-        for(int i=0;i<100;i++){
+        for(int i=0;i<10;i++){
             Color c1 = Color.color(Math.random(),Math.random(),Math.random());
             Figure figure = new Figure(c1);
             figures.add(figure);
@@ -68,7 +68,8 @@ public class App extends Application {
         figuresToDraw.removeAll(figuresToDraw);
         figuresToDraw.addAll(figures);
 
-        group.getChildren().removeAll(group.getChildren());
+        for(Figure figure: figuresToDraw)
+            group.getChildren().remove(figure.getShape());
 
         figuresToDraw.forEach(figure->figure.draw(group));
     }

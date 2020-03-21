@@ -17,13 +17,13 @@ class Figure {
         //do stałej!
         this.color = color;
 
-        xPositon = (float)(Math.random()*200+50);
-        yPositon = (float)(Math.random()*200+50);
+        xPositon = (float)(Math.random()*500+50);
+        yPositon = (float)(Math.random()*500+50);
 
         circle = new Circle();
 
         circle.setFill(this.color);
-        circle.setRadius(Math.random()*50+10);
+        circle.setRadius(Math.random()*10+10);
         circle.setCenterX(xPositon);
         circle.setCenterY(yPositon);
     }
