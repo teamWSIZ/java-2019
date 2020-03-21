@@ -4,13 +4,20 @@
 package com.javafx.example;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class App extends Application {
+    ArrayList<Figure> figures = new ArrayList<>();
+    ArrayList<Figure> figuresToDraw = new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -26,11 +33,15 @@ public class App extends Application {
             generate();
         });
 
+        arrayList.setOnMouseClicked(e->{
+            drawArrayList();
+        });
+
         HBox hBox = new HBox();
         hBox.getChildren().addAll(generate,clear,arrayList,set);
 
-        //hBox.setPrefSize(scene.getWidth(),scene.getHeight());
-        //hBox.setAlignment(Pos.BOTTOM_CENTER);
+        hBox.setPrefSize(scene.getWidth(),scene.getHeight());
+        hBox.setAlignment(Pos.BOTTOM_CENTER);
         //hBox.setSpacing(5);
 
         group.getChildren().add(hBox);
@@ -40,14 +51,22 @@ public class App extends Application {
     }
 
     void generate(){
+        for(int i=0;i<100;i++){
+            Figure figure = new Figure(Color.BLUE);
+            figures.add(figure);
+        }
+    }
 
+    void drawArrayList(){
+        figuresToDraw.removeAll(figuresToDraw);
+        figuresToDraw.addAll(figures);
     }
 
     Button createButton(String text){
         //W tej funkcji można ustawić parametry wszystkich klawiszy
         Button button = new Button(text);
-        //button.setMaxWidth(Double.MAX_VALUE);
-        //HBox.setHgrow(button, Priority.ALWAYS);
+        button.setMaxWidth(Double.MAX_VALUE);
+        HBox.setHgrow(button, Priority.ALWAYS);
         return button;
     }
 
