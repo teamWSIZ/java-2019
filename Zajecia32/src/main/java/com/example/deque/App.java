@@ -16,6 +16,22 @@ public class App {
     }
 
     public void dequeTest(){
+        for(int i=0;i<10;i++)
+            deque.offerFirst((double)i);
 
+        System.out.println(deque);
+
+        deque.offerFirst(100.0);
+        deque.offerLast(200.0);
+
+        System.out.println(deque);
+        System.out.println("First element: "+deque.peekFirst());
+        System.out.println(deque);
+        System.out.println("Last element: "+deque.peekLast());
+        System.out.println(deque);
+        System.out.println("First element: "+deque.pollFirst());
+        System.out.println(deque);
+        System.out.println("Last element: "+deque.pollLast());
+        System.out.println(deque);
     }
 }
