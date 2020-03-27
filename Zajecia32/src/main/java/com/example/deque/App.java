@@ -12,7 +12,8 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        app.dequeTest();
+        //app.dequeTest();
+        app.dequeTest1();
     }
 
     public void dequeTest(){
@@ -33,6 +34,20 @@ public class App {
         System.out.println(deque);
         System.out.println("Last element: "+deque.pollLast());
         System.out.println(deque);
+    }
+
+    public void dequeTest1(){
+        for(int i=0;i<10;i++)
+            deque.addFirst((double)i);
+
+        System.out.println(deque);
+
+        for(int i=0;i<20;i++) {
+            if(!deque.isEmpty()) {
+                deque.removeFirst();
+                System.out.println(deque);
+            }
+        }
     }
 
     //ćwiczenie 1 - proszę wykonać samodzielnie
