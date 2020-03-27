@@ -10,6 +10,7 @@ class Student{
     final String name;
     final String surname;
 
+    final int no = 0;
     final Integer id;
 
     Student(String name, String surname){
@@ -19,6 +20,14 @@ class Student{
         id = 1;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }
 
 public class App {
@@ -69,7 +78,10 @@ public class App {
     }
 
     public void dequeStudent(){
+        for(int i=0;i<10;i++)
+            studentsDeque.offerFirst(new Student("Przemysław","Stokłosa"));
 
+        System.out.println(studentsDeque);
     }
 
     //ćwiczenie 1 - proszę wykonać samodzielnie
