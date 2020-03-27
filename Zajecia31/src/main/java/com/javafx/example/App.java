@@ -46,6 +46,10 @@ public class App extends Application {
             group.getChildren().add(circle);*/
         });
 
+        set.setOnMouseClicked(e->{
+            drawSet(group);
+        });
+
         HBox hBox = new HBox();
         hBox.getChildren().addAll(generate,clear,arrayList,set);
 
@@ -68,13 +72,23 @@ public class App extends Application {
     }
 
     void drawArrayList(Group group){
-        figuresToDraw.removeAll(figuresToDraw);
+        figuresToDraw.clear();
         figuresToDraw.addAll(figures);
 
-        for(Figure figure: figuresToDraw)
+        for(Figure figure: figures)
             group.getChildren().remove(figure.getShape());
 
         figuresToDraw.forEach(figure->figure.draw(group));
+    }
+
+    void drawSet(Group group){
+        figuresToDraw.clear();
+        figuresSet.addAll(figures);
+
+        for(Figure figure: figures)
+            group.getChildren().remove(figure.getShape());
+
+        figuresSet.forEach(figure->figure.draw(group));
     }
 
     Button createButton(String text){
