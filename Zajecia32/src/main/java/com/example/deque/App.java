@@ -6,6 +6,21 @@ package com.example.deque;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+class Student{
+    final String name;
+    final String surname;
+
+    final Integer id;
+
+    Student(String name, String surname){
+        this.name = name;
+        this.surname = surname;
+
+        id = 1;
+    }
+
+}
+
 public class App {
 
     Deque<Double> deque = new ArrayDeque<>();
