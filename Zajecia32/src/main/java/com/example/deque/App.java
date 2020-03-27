@@ -34,4 +34,9 @@ public class App {
         System.out.println("Last element: "+deque.pollLast());
         System.out.println(deque);
     }
+
+    //ćwiczenie 1 - proszę wykonać samodzielnie
+    public void function0(int no){
+
+    }
 }
