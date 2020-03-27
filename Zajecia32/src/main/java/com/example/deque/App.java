@@ -24,11 +24,14 @@ class Student{
 public class App {
 
     Deque<Double> deque = new ArrayDeque<>();
+    Deque<Student> studentsDeque = new ArrayDeque<>();
 
     public static void main(String[] args) {
         App app = new App();
         //app.dequeTest();
-        app.dequeTest1();
+        //app.dequeTest1();
+
+        app.dequeStudent();
     }
 
     public void dequeTest(){
@@ -63,6 +66,10 @@ public class App {
                 System.out.println(deque);
             }
         }
+    }
+
+    public void dequeStudent(){
+
     }
 
     //ćwiczenie 1 - proszę wykonać samodzielnie
