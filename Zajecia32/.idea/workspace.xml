@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e27712-d48a-42e2-a3f3-c1a9149fba3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/DequeExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/DequeExample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/DequeExample_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/DequeExample_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/DequeExample_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/DequeExample_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/deque/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/deque/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia33/src/main/java/com/example/exceptions/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia33/src/main/java/com/example/exceptions/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -50,6 +59,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1ZiWpL4YvgIEhZW3S9BA9Rx8bq6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,6 +69,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -122,21 +136,21 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="332" y="27" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1585326326897" />
-    <state width="1334" height="83" key="GridCell.Tab.0.bottom" timestamp="1585333387761">
+    <state width="1378" height="146" key="GridCell.Tab.0.bottom" timestamp="1585381817352">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1334" height="83" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1585333387761" />
-    <state width="1334" height="83" key="GridCell.Tab.0.center" timestamp="1585333387760">
+    <state width="1378" height="146" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1585381817352" />
+    <state width="1378" height="146" key="GridCell.Tab.0.center" timestamp="1585381817351">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1334" height="83" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1585333387760" />
-    <state width="1334" height="83" key="GridCell.Tab.0.left" timestamp="1585333387760">
+    <state width="1378" height="146" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1585381817351" />
+    <state width="1378" height="146" key="GridCell.Tab.0.left" timestamp="1585381817351">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1334" height="83" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1585333387760" />
-    <state width="1334" height="83" key="GridCell.Tab.0.right" timestamp="1585333387761">
+    <state width="1378" height="146" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1585381817351" />
+    <state width="1378" height="146" key="GridCell.Tab.0.right" timestamp="1585381817352">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1334" height="83" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1585333387761" />
+    <state width="1378" height="146" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1585381817352" />
   </component>
 </project>

@@ -5,6 +5,7 @@ package com.example.deque;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.NoSuchElementException;
 
 class Student{
     final String name;
@@ -38,9 +39,9 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         //app.dequeTest();
-        //app.dequeTest1();
+        app.dequeTest1();
 
-        app.dequeStudent();
+        //app.dequeStudent();
     }
 
     public void dequeTest(){
@@ -70,10 +71,17 @@ public class App {
         System.out.println(deque);
 
         for(int i=0;i<20;i++) {
-            if(!deque.isEmpty()) {
+            //if(!deque.isEmpty()) {
+            try {
                 deque.removeFirst();
                 System.out.println(deque);
+            }catch(NoSuchElementException e){
+                System.out.println("Przechwycono wyjątek...");
+                e.printStackTrace();
+            }finally {
+                System.out.println("Ta linia zawsze się wykona");
             }
+            //}
         }
     }
 

@@ -10,12 +10,39 @@ public class App {
         App app = new App();
 
         try {
-            app.setLength(-10);
-            app.setLength(250);
+            app.f0();
         }catch(ArithmeticException e){
             System.out.println("Nie udało się ustawić długości: "+e.getMessage());
-
+            e.printStackTrace();
+            app.setDefaultLength();
+        }finally{
+            System.out.println("Długość wynosi: "+app.length);
         }
+    }
+
+    public void setDefaultLength(){
+        this.length = 100;
+    }
+
+    void f0(){
+        //Proszę zobaczyć jak wykląda informacja wyświetlona przez wyjątek
+        f1();
+    }
+
+    void f1(){
+        f2();
+    }
+
+    void f2(){
+        f3();
+    }
+
+    void f3(){
+        f4();
+    }
+
+    void f4(){
+        setLength(-10);
     }
 
     public void setLength(double length){
@@ -23,10 +50,6 @@ public class App {
 
         if(length<0)
             throw new ArithmeticException("Długość nie może być ujemna");
-
-        if(length>200){
-
-        }
 
         System.out.println("Ustawiono długość: "+length);
     }
