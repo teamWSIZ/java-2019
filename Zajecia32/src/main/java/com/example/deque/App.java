@@ -10,14 +10,14 @@ class Student{
     final String name;
     final String surname;
 
-    final int no = 0;
+    private static int no = 0;
     final Integer id;
 
     Student(String name, String surname){
         this.name = name;
         this.surname = surname;
-
-        id = 1;
+        no++;
+        id = no;
     }
 
     @Override
