@@ -4,7 +4,7 @@
 package com.example.exceptions;
 
 class MyException extends Exception{
-    private String info = null;
+    private String info;
 
     public MyException(String message, double value) {
         super(message);
@@ -19,11 +19,13 @@ class MyException extends Exception{
 public class App {
     double value;
 
+    static double[] array = {1,2,3,4,5};
+
     public static void main(String[] args) {
         App app = new App();
 
         try {
-            app.setValue(-10);
+            app.setValue(10);
         }catch(MyException e){
             System.out.println("Wyrzucono wyjątek: "+e.getMessage());
             System.out.println(e.getInfo());
@@ -31,16 +33,27 @@ public class App {
 
         }
 
+        try {
+            array[5] = 1;
+        }catch(IndexOutOfBoundsException e){
+            System.out.println("Nieprawidłowy indeks tablicy: "+e.getMessage());
+            e.printStackTrace();
+        }
+
         app.f1();
 
     }
 
     void f0() throws MyException{
-        setValue(40);
+        setValue(-50);
     }
 
     void f1() {
-        f0();
+        try {
+            f0();
+        } catch (MyException e) {
+            e.printStackTrace();
+        }
     }
 
     void setValue(double value) throws MyException{
