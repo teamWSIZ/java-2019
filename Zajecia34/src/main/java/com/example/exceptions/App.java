@@ -3,7 +3,7 @@
  */
 package com.example.exceptions;
 
-class MyException extends RuntimeException{
+class MyException extends Exception{
     private String info = null;
 
     public MyException(String message, double value) {
@@ -30,9 +30,20 @@ public class App {
             e.printStackTrace();
 
         }
+
+        app.f1();
+
     }
 
-    void setValue(double value){
+    void f0() throws MyException{
+        setValue(40);
+    }
+
+    void f1() {
+        f0();
+    }
+
+    void setValue(double value) throws MyException{
         if(value<0)
             throw new MyException("Wartość nie może być ujemna", value);
 
