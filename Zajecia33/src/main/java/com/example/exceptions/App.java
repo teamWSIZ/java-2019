@@ -4,11 +4,25 @@
 package com.example.exceptions;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+    double length = 0;
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+
+        try {
+            app.setLength(-10);
+        }catch(ArithmeticException e){
+            System.out.println("Nie udało się ustawić długości: "+e.getMessage());
+
+        }
+    }
+
+    public void setLength(double length){
+        this.length = length;
+
+        if(length<0)
+            throw new ArithmeticException("Długość nie może być ujemna");
+
+        System.out.println("Ustawiono długość: "+length);
     }
 }
