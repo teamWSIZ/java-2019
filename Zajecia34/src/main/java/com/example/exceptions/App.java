@@ -4,8 +4,15 @@
 package com.example.exceptions;
 
 class MyException extends RuntimeException{
-    public MyException(String message) {
+    private String info = null;
+
+    public MyException(String message, double value) {
         super(message);
+        info = "Funkcja próbuje ustawić wartość: "+value;
+    }
+
+    public String getInfo() {
+        return info;
     }
 }
 
@@ -18,13 +25,16 @@ public class App {
         try {
             app.setValue(-10);
         }catch(MyException e){
+            System.out.println("Wyrzucono wyjątek: "+e.getMessage());
+            System.out.println(e.getInfo());
             e.printStackTrace();
+
         }
     }
 
     void setValue(double value){
         if(value<0)
-            throw new MyException("Wartość nie może być ujemna");
+            throw new MyException("Wartość nie może być ujemna", value);
 
         this.value = value;
 
