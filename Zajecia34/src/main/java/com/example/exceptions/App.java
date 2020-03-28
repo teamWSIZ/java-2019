@@ -26,6 +26,8 @@ public class App {
         if(value<0)
             throw new MyException("Wartość nie może być ujemna");
 
-        System.out.println("Ustawiam wartość: "+value);
+        this.value = value;
+
+        System.out.println("Ustawiam wartość: "+this.value);
     }
 }
