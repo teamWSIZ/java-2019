@@ -3,9 +3,29 @@
  */
 package com.example.exceptions;
 
+class MyException extends RuntimeException{
+    public MyException(String message) {
+        super(message);
+    }
+}
+
 public class App {
+    double value;
 
     public static void main(String[] args) {
         App app = new App();
+
+        try {
+            app.setValue(-10);
+        }catch(MyException e){
+            e.printStackTrace();
+        }
+    }
+
+    void setValue(double value){
+        if(value<0)
+            throw new MyException("Wartość nie może być ujemna");
+
+        System.out.println("Ustawiam wartość: "+value);
     }
 }
