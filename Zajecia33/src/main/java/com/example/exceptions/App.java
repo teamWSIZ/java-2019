@@ -11,6 +11,7 @@ public class App {
 
         try {
             app.setLength(-10);
+            app.setLength(250);
         }catch(ArithmeticException e){
             System.out.println("Nie udało się ustawić długości: "+e.getMessage());
 
@@ -22,6 +23,10 @@ public class App {
 
         if(length<0)
             throw new ArithmeticException("Długość nie może być ujemna");
+
+        if(length>200){
+
+        }
 
         System.out.println("Ustawiono długość: "+length);
     }
