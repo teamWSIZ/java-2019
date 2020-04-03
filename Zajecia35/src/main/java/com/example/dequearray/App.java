@@ -8,20 +8,21 @@ import java.util.Deque;
 
 class chatRecord{
     String text;
+    String date;
+
     chatRecord(String text){
         this.text = text;
+        date = "17:20";
     }
 
     @Override
     public String toString() {
-        return "chatRecord{" +
-                "text='" + text + '\'' +
-                '}';
+        return "["+text+"  "+date+"]"+"\n";
     }
 }
 
 public class App {
-    Deque<String> chatDeque = new ArrayDeque<>();
+    Deque<chatRecord> chatDeque = new ArrayDeque<>();
 
     public static void main(String[] args) {
         App app = new App();
@@ -29,12 +30,11 @@ public class App {
     }
 
     public void chatTest(){
-        System.out.println(chatDeque);
 
-        chatDeque.offerLast("Pierwsza linia");
-        chatDeque.offerLast("Kolejna linia ");
-        chatDeque.offerLast("Linia");
-        chatDeque.offerLast("Linia");
+        chatDeque.offerLast(new chatRecord("Pierwsza linia"));
+        chatDeque.offerLast(new chatRecord("Kolejna linia "));
+        chatDeque.offerLast(new chatRecord("Linia"));
+        chatDeque.offerLast(new chatRecord("Linia"));
 
         System.out.println(chatDeque);
 
