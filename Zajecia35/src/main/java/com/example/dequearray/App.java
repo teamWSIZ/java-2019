@@ -16,5 +16,13 @@ public class App {
 
     public void chatTest(){
         System.out.println(chatDeque);
+
+        chatDeque.offerLast("Pierwsza linia");
+        chatDeque.offerLast("Kolejna linia ");
+        chatDeque.offerLast("Linia");
+        chatDeque.offerLast("Linia");
+
+        System.out.println(chatDeque);
+
     }
 }
