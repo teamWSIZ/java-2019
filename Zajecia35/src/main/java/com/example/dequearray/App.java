@@ -6,6 +6,20 @@ package com.example.dequearray;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+class chatRecord{
+    String text;
+    chatRecord(String text){
+        this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return "chatRecord{" +
+                "text='" + text + '\'' +
+                '}';
+    }
+}
+
 public class App {
     Deque<String> chatDeque = new ArrayDeque<>();
 
