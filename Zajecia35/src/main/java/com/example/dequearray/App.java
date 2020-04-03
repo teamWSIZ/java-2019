@@ -3,12 +3,18 @@
  */
 package com.example.dequearray;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+    Deque<String> chatDeque = new ArrayDeque<>();
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        app.chatTest();
+    }
+
+    public void chatTest(){
+        System.out.println(chatDeque);
     }
 }
