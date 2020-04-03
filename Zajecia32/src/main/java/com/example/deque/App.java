@@ -36,10 +36,13 @@ public class App {
     Deque<Double> deque = new ArrayDeque<>();
     Deque<Student> studentsDeque = new ArrayDeque<>();
 
+    Deque<String> chatDeque = new ArrayDeque<>();
+
     public static void main(String[] args) {
         App app = new App();
+        app.chatTest();
         //app.dequeTest();
-        app.dequeTest1();
+        //app.dequeTest1();
 
         //app.dequeStudent();
     }
@@ -51,9 +54,15 @@ public class App {
         System.out.println(deque);
 
         deque.offerFirst(100.0);
+        deque.offerFirst(100.0);
+
+        deque.offerLast(200.0);
         deque.offerLast(200.0);
 
         System.out.println(deque);
+        //deque.offerLast(200.0);
+
+        /*System.out.println(deque);
         System.out.println("First element: "+deque.peekFirst());
         System.out.println(deque);
         System.out.println("Last element: "+deque.peekLast());
@@ -61,7 +70,11 @@ public class App {
         System.out.println("First element: "+deque.pollFirst());
         System.out.println(deque);
         System.out.println("Last element: "+deque.pollLast());
-        System.out.println(deque);
+        System.out.println(deque);*/
+    }
+
+    public void chatTest(){
+
     }
 
     public void dequeTest1(){
