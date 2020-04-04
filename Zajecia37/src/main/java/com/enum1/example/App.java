@@ -3,6 +3,14 @@
  */
 package com.enum1.example;
 
+enum Planet{
+    MERCURY,
+    EARTH,
+    MARS,
+    VENUS,
+    JUPITER
+}
+
 public class App {
 
     public static void main(String[] args) {
@@ -11,6 +19,28 @@ public class App {
     }
 
     void example1(){
+
+        for(Planet planet : Planet.values()){
+            System.out.println(planet);
+        }
+
+        Planet planete = Planet.JUPITER;
+
+        switch(planete){
+            case EARTH:
+            case MARS:
+                System.out.println("Można wysłać pojazd badawczy");
+                break;
+            case JUPITER:
+                System.out.println("Gazowy olbrzym");
+                break;
+            default:
+                System.out.println("Inna planeta");
+        }
+
+        String text = "Jakiś napis";
+
+
 
     }
 }
