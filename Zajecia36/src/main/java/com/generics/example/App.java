@@ -16,7 +16,6 @@ class Chat<T>{
     void printChat(){
         System.out.println(chatDeque);
     }
-
 }
 
 public class App {
@@ -31,5 +30,32 @@ public class App {
         chat.addLine("Kolejna linia");
 
         chat.printChat();
+
+        System.out.println("________________________");
+
+        Chat<ChatRecord> chat1 = new Chat<>();
+        chat1.addLine(new ChatRecord("Pierwsza linia"));
+        chat1.addLine(new ChatRecord("Kolejna linia"));
+
+        chat1.printChat();
+
+        Chat<Double> chat2 = new Chat<>();
+        chat2.addLine(10.0);
+        chat2.addLine(5.0);
+        chat2.printChat();
+
+        Chat<Integer> chat3 = new Chat<>();
+        chat3.addLine(10);
+        chat3.addLine(5);
+
+        chat3.printChat();
+
+        Chat<Object> chat4 = new Chat<>();
+        chat4.addLine(10);
+        chat4.addLine(5.0);
+        chat4.addLine("Kolejna linia");
+        chat4.addLine(new ChatRecord("Kolejna linia"));
+
+        chat4.printChat();
     }
 }
