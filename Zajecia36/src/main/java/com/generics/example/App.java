@@ -4,11 +4,12 @@
 package com.generics.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+    public static void main(String[] args) {
+        App app = new App();
+        app.example1();
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public void example1(){
+
     }
 }
