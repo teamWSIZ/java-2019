@@ -3,16 +3,23 @@
  */
 package com.example.dequearray;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
+import java.util.Calendar;
 import java.util.Deque;
 
-class chatRecord{
+class ChatRecord {
     String text;
     String date;
 
-    chatRecord(String text){
+    ChatRecord(String text){
         this.text = text;
-        date = "17:20";
+
+        DateFormat dateFormat = new SimpleDateFormat("m:s");
+
+        Calendar calendar = Calendar.getInstance();
+        date = "Czas "+dateFormat.format(calendar.getTime());
     }
 
     @Override
@@ -31,10 +38,10 @@ public class App {
 
     public void chatTest(){
 
-        chatDeque.offerLast(new chatRecord("Pierwsza linia"));
-        chatDeque.offerLast(new chatRecord("Kolejna linia "));
-        chatDeque.offerLast(new chatRecord("Linia"));
-        chatDeque.offerLast(new chatRecord("Linia"));
+        chatDeque.offerLast(new ChatRecord("Pierwsza linia"));
+        chatDeque.offerLast(new ChatRecord("Kolejna linia "));
+        chatDeque.offerLast(new ChatRecord("Linia"));
+        chatDeque.offerLast(new ChatRecord("Linia"));
 
         System.out.println(chatDeque);
 
