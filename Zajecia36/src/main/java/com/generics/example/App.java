@@ -3,6 +3,22 @@
  */
 package com.generics.example;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+class Chat<T>{
+    Deque<T> chatDeque = new ArrayDeque<>();
+
+    void addLine(T line){
+        chatDeque.add(line);
+    }
+
+    void printChat(){
+        System.out.println(chatDeque);
+    }
+
+}
+
 public class App {
     public static void main(String[] args) {
         App app = new App();
@@ -10,6 +26,10 @@ public class App {
     }
 
     public void example1(){
+        Chat<String> chat = new Chat<>();
+        chat.addLine("Pierwsza linia");
+        chat.addLine("Kolejna linia");
 
+        chat.printChat();
     }
 }
