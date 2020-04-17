@@ -8,13 +8,14 @@ public enum Students {
     KATARZYNA_SKRZYP(168);
 
     final private double height;
+    final private int maxPullUp;
     final public static String groupInfo;
 
     static{
         groupInfo = "Gr.C";
     }
 
-    Students(double height){
+    Students(double height,double maxPullUp){
         this.height = height;
     }
 

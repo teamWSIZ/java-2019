@@ -3,6 +3,9 @@
  */
 package com.enum1.example;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 enum Planet{
     MERCURY,
     EARTH,
@@ -12,6 +15,8 @@ enum Planet{
 }
 
 public class App {
+
+    Deque<Students> studentsDeque = new ArrayDeque<>();
 
     public static void main(String[] args) {
         App app = new App();
