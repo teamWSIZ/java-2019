@@ -8,6 +8,11 @@ public enum Students {
     KATARZYNA_SKRZYP(168);
 
     final private double height;
+    final public static String groupInfo;
+
+    static{
+        groupInfo = "Gr.C";
+    }
 
     Students(double height){
         this.height = height;

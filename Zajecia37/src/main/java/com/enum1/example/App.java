@@ -47,5 +47,19 @@ public class App {
 
         Students student = Students.KRZYSZTOF_ZAREBSKI;
         System.out.println(student.getHeight());
+
+        switch(student){
+            case KRZYSZTOF_ZAREBSKI:
+            case KAMIL_STASICA:
+                System.out.println("Krzysztof Zarębski");
+                break;
+            case KATARZYNA_SKRZYP:
+                System.out.println("Krzysztof Zarębski");
+            default:
+                System.out.println("Wybrano innego studenta...");
+                break;
+        }
+
+        System.out.println("Informacje o grupie: "+Students.groupInfo);
     }
 }
