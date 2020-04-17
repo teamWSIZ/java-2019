@@ -44,5 +44,8 @@ public class App {
     void example2(){
         for(Students student : Students.values())
             System.out.println(student);
+
+        Students student = Students.KRZYSZTOF_ZAREBSKI;
+        System.out.println(student.getHeight());
     }
 }
