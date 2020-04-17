@@ -15,7 +15,8 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        app.example1();
+        //app.example1();
+        app.example2();
     }
 
     void example1(){
@@ -38,5 +39,10 @@ public class App {
                 System.out.println("Inna planeta");
         }
 
+    }
+
+    void example2(){
+        for(Students student : Students.values())
+            System.out.println(student);
     }
 }

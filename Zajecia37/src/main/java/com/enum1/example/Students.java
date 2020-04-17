@@ -1,6 +1,6 @@
 package com.enum1.example;
 
-public enum Student {
+public enum Students {
     KRZYSZTOF_ZAREBSKI,
     JOZEF_KUDRYS,
     KAMIL_STASICA,
