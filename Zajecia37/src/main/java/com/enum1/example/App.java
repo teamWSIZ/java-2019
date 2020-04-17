@@ -3,6 +3,8 @@
  */
 package com.enum1.example;
 
+import java.util.ArrayList;
+
 enum Planet{
     MERCURY,
     EARTH,
