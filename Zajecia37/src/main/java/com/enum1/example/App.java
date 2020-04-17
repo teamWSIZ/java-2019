@@ -40,9 +40,5 @@ public class App {
                 System.out.println("Inna planeta");
         }
 
-        String text = "Jakiś napis";
-
-
-
     }
 }
