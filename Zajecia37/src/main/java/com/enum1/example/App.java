@@ -22,6 +22,7 @@ public class App {
         App app = new App();
         //app.example1();
         app.example2();
+        app.makeExcercise();
     }
 
     void example1(){
@@ -66,5 +67,18 @@ public class App {
         }
 
         System.out.println("Informacje o grupie: "+Students.groupInfo);
+
+        studentsDeque.offer(Students.KRZYSZTOF_ZAREBSKI);
+        studentsDeque.offer(Students.JOZEF_KUDRYS);
+        studentsDeque.offer(Students.KAMIL_STASICA);
+        studentsDeque.offer(Students.ARKADIUSZ_KUBINSKI);
+        studentsDeque.offer(Students.KATARZYNA_SKRZYP);
+    }
+
+    void makeExcercise(){
+        while(!studentsDeque.isEmpty()) {
+            System.out.println(studentsDeque);
+            Students student = studentsDeque.poll();
+        }
     }
 }
