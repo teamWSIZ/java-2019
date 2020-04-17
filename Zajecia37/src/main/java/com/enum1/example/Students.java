@@ -28,7 +28,7 @@ public enum Students {
         return super.toString()+": "+height;
     }
 
-    public void makeExcercise(){
+    public void makeExercise(){
         System.out.println("Wykonuję "+maxPullUp+" podciągnięć.");
     }
 }

@@ -22,7 +22,7 @@ public class App {
         App app = new App();
         //app.example1();
         app.example2();
-        app.makeExcercise();
+        app.makeExercise();
     }
 
     void example1(){
@@ -75,10 +75,11 @@ public class App {
         studentsDeque.offer(Students.KATARZYNA_SKRZYP);
     }
 
-    void makeExcercise(){
+    void makeExercise(){
         while(!studentsDeque.isEmpty()) {
-            System.out.println(studentsDeque);
+            //System.out.println(studentsDeque);
             Students student = studentsDeque.poll();
+            student.makeExercise();
         }
     }
 }
