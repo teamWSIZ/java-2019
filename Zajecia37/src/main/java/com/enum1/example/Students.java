@@ -16,4 +16,8 @@ public enum Students {
     public double getHeight() {
         return height;
     }
+
+    public String info() {
+        return super.toString()+": "+height;
+    }
 }
