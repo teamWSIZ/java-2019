@@ -1,12 +1,16 @@
 package com.example.objects;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 
 enum Month {
     Styczen, Luty, Marzec, Kwiecien, Maj, Czerwiec;
 }
 
 public class Main {
+
+    Deque<String> seasonsLog = new ArrayDeque<>();
 
     public static void main(String[] args) {
         // write your code here
