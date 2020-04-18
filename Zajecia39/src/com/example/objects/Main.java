@@ -19,8 +19,12 @@ public class Main {
 
         Main main = new Main();
 
-        Month month = Month.Kwiecien;
-        System.out.println(main.season2(month));
+        System.out.println(main.season2(Month.Kwiecien));
+        System.out.println(main.season2(Month.Styczen));
+        System.out.println(main.season2(Month.Luty));
+        System.out.println(main.season2(Month.Maj));
+
+        main.printSeasonLog();
 
     }
 
@@ -72,5 +76,11 @@ public class Main {
 
         //System.out.println(nameOfSeason);
         return nameOfSeason;
+    }
+
+    void printSeasonLog(){
+        System.out.println("______season log_______");
+        //seasonsLog.forEach(line->System.out.println(line));
+        seasonsLog.forEach(System.out::println);
     }
 }
