@@ -5,5 +5,6 @@ package com.example.switchb;
 
 public class App {
     public static void main(String[] args) {
+        var zm = 10.0;
     }
 }
