@@ -58,10 +58,14 @@ public class Main {
     }
 
     String season2(Month month) {
+        //Uwaga: tutaj można od razu wpisać return
         String nameOfSeason =
 
                 switch (month) {
-                    case Styczen, Luty -> "Zima";
+                    case Styczen, Luty -> {
+                        seasonsLog.offer("Zima");
+                        yield "Zima";
+                    }
                     case Marzec, Kwiecien, Maj -> "Wiosna";
                     default -> "Inna pora roku";
                 };
