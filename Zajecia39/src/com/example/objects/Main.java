@@ -16,20 +16,25 @@ public class Main {
         Main main = new Main();
 
         Month month = Month.Kwiecien;
-        System.out.println(main.season(month));
+        main.season(month);
+
     }
 
-    String season(Month month){
+    void season(Month month){
+        String nameOfSeason = "";
+
         switch(month){
             case Styczen:
             case Luty:
-                return "Zima";
+                nameOfSeason = "Zima";
             case Marzec:
             case Kwiecien:
             case Maj:
-                return "Wiosna";
+                nameOfSeason = "Wiosna";
             default:
-                return "Inna pora roku";
+                nameOfSeason = "Inna pora roku";
         }
+
+        System.out.println(nameOfSeason);
     }
 }
