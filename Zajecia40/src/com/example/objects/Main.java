@@ -44,7 +44,7 @@ public class Main {
             System.out.println("------------------");
         }
 
-        System.out.println("Przestawienia: "+noIteration);
+        System.out.println("Liczba wejść do pętli: "+noIteration);
 
     }
 
