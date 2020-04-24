@@ -10,7 +10,7 @@ public class Main {
         // write your code here
         ArrayList<Integer> array = new ArrayList<>();
         //array.add(40);
-        array.addAll(Arrays.asList(10, 1, 2, 3, 4, 5, 6));
+        array.addAll(Arrays.asList(10, 1, 2, 40, 4, 5, 6));
 
         Main app = new Main();
         app.sort(array);
@@ -19,25 +19,23 @@ public class Main {
 
         boolean swapped = false;
 
-        for (int i = 0; i < array.size() - 1; i++) {
+        do{
+            swapped = false;
+            for (int i = 0; i < array.size() - 1; i++) {
 
-            var n0 = array.get(i);
-            var n1 = array.get(i+1);
+                var n0 = array.get(i);
+                var n1 = array.get(i + 1);
 
-            if (n0 > n1) {
-                array.set(i, n1);
-                array.set(i+1, n0);
+                if (n0 > n1) {
+                    array.set(i, n1);
+                    array.set(i + 1, n0);
 
-                swapped = true;
+                    swapped = true;
 
-                System.out.println(array);
+                    System.out.println(array);
+                }
             }
-        }
-
-        if(swapped==true)
-            System.out.println("Wykonano przestawienie...");
-        else
-            System.out.println("Macierz jest już posortowana");
+        }while(swapped);
 
     }
 
