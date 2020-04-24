@@ -19,6 +19,8 @@ public class Main {
 
         boolean swapped = true;
 
+        int noIteration = 0;
+
         while(swapped){
             swapped = false;
             for (int i = 0; i < array.size() - 1; i++) {
@@ -34,8 +36,12 @@ public class Main {
 
                     System.out.println(array);
                 }
+
+                noIteration++;
             }
         }
+
+        System.out.println("Przestawienia: "+noIteration);
 
     }
 
