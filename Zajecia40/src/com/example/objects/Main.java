@@ -10,7 +10,14 @@ public class Main {
         // write your code here
         ArrayList<Integer> array = new ArrayList<>();
         //array.add(40);
-        array.addAll(Arrays.asList(5, 4, 3, 2, 1, 0));
+        array.addAll(Arrays.asList(7, 6, 5, 10, 3, 2, 1, 0));
+
+        /*array.sort((n0, n1) -> {
+            System.out.println(array);
+            return Integer.compare(n0, n1);
+        });*/
+
+        System.out.println(array);
 
         Main app = new Main();
         app.sort(array);
@@ -42,12 +49,10 @@ public class Main {
             }
 
             lengthToSort = lengthToSort - 1;
-
             System.out.println("------------------");
         }
 
         System.out.println("Liczba wejść do pętli: " + noIteration);
-
     }
 
     public void sort(ArrayList<Integer> array) {
