@@ -17,9 +17,9 @@ public class Main {
 
         System.out.println(array);
 
-        boolean swapped = false;
+        boolean swapped = true;
 
-        do{
+        while(swapped){
             swapped = false;
             for (int i = 0; i < array.size() - 1; i++) {
 
@@ -35,7 +35,7 @@ public class Main {
                     System.out.println(array);
                 }
             }
-        }while(swapped);
+        }
 
     }
 
