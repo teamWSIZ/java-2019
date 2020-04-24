@@ -10,7 +10,7 @@ public class Main {
         // write your code here
         ArrayList<Integer> array = new ArrayList<>();
         //array.add(40);
-        array.addAll(Arrays.asList(10, 1, 2, 40, 4, 5, 6));
+        array.addAll(Arrays.asList(5,4,3,2,1,0));
 
         Main app = new Main();
         app.sort(array);
@@ -40,6 +40,8 @@ public class Main {
 
                 noIteration++;
             }
+
+            System.out.println("------------------");
         }
 
         System.out.println("Przestawienia: "+noIteration);
