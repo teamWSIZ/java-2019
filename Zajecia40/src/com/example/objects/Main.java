@@ -20,10 +20,11 @@ public class Main {
         boolean swapped = true;
 
         int noIteration = 0;
+        int lengthToSort = array.size() - 1;
 
         while(swapped){
             swapped = false;
-            for (int i = 0; i < array.size() - 1; i++) {
+            for (int i = 0; i < lengthToSort; i++) {
 
                 var n0 = array.get(i);
                 var n1 = array.get(i + 1);
