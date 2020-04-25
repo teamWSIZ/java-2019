@@ -13,6 +13,11 @@ class sortInfo{
         this.noIteration = noIteration;
         this.time = time;
     }
+
+    @Override
+    public String toString() {
+        return "Ilość iteracji: "+noIteration+" czas wykonania:"+time+"ms";
+    }
 }
 
 public class Main {
@@ -30,16 +35,12 @@ public class Main {
 
         System.out.println(array);
 
-        var startTime = System.currentTimeMillis();
-        int noIteration = app.sort(array,false).noIteration;
-        var endTime = System.currentTimeMillis();
+        var sortInfo = app.sort(array,false);
 
-        var sortTime = endTime - startTime;
+        System.out.println("Sortowanie bąbelkowe: " + sortInfo);
 
-        System.out.println("Sortowanie bąbelkowe: " + noIteration+" czas sortowania:"+sortTime);
-
-        noIteration = app.standardSort(array1,false).noIteration;
-        System.out.println("Sortowanie Java: " + noIteration);
+        sortInfo = app.standardSort(array1,false);
+        System.out.println("Sortowanie Java: " + sortInfo);
     }
 
     public void generateData(ArrayList<Integer> array,int noValues){
@@ -51,6 +52,7 @@ public class Main {
     }
 
     public sortInfo standardSort(ArrayList<Integer> array,boolean print){
+        var startTime = System.currentTimeMillis();
         final int[] noIteration = {0};
 
         array.sort((n0, n1) -> {
@@ -60,10 +62,13 @@ public class Main {
             return Integer.compare(n0, n1);
         });
 
-        return new sortInfo(noIteration[0],0);
+        var endTime = System.currentTimeMillis();
+
+        return new sortInfo(noIteration[0],endTime-startTime);
     }
 
     public sortInfo sort(ArrayList<Integer> array,boolean print) {
+        var startTime = System.currentTimeMillis();
         boolean swapped = true;
 
         int noIteration = 0;
@@ -94,8 +99,9 @@ public class Main {
             if(print)
                 System.out.println("------------------");
         }
+        var endTime = System.currentTimeMillis();
 
-        return new sortInfo(noIteration,0);
+        return new sortInfo(noIteration,endTime-startTime);
     }
 
 
