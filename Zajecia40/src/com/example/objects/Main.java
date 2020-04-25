@@ -31,14 +31,14 @@ public class Main {
         System.out.println(array);
 
         var startTime = System.currentTimeMillis();
-        var noIteration = app.sort(array,false);
+        int noIteration = app.sort(array,false).noIteration;
         var endTime = System.currentTimeMillis();
 
         var sortTime = endTime - startTime;
 
         System.out.println("Sortowanie bąbelkowe: " + noIteration+" czas sortowania:"+sortTime);
 
-        noIteration = app.standardSort(array1,false);
+        noIteration = app.standardSort(array1,false).noIteration;
         System.out.println("Sortowanie Java: " + noIteration);
     }
 
@@ -50,7 +50,7 @@ public class Main {
             array.add(random.nextInt(100));
     }
 
-    public int standardSort(ArrayList<Integer> array,boolean print){
+    public sortInfo standardSort(ArrayList<Integer> array,boolean print){
         final int[] noIteration = {0};
 
         array.sort((n0, n1) -> {
@@ -60,10 +60,10 @@ public class Main {
             return Integer.compare(n0, n1);
         });
 
-        return noIteration[0];
+        return new sortInfo(noIteration[0],0);
     }
 
-    public int sort(ArrayList<Integer> array,boolean print) {
+    public sortInfo sort(ArrayList<Integer> array,boolean print) {
         boolean swapped = true;
 
         int noIteration = 0;
@@ -95,7 +95,7 @@ public class Main {
                 System.out.println("------------------");
         }
 
-        return noIteration;
+        return new sortInfo(noIteration,0);
     }
 
 
