@@ -9,24 +9,35 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Integer> array = new ArrayList<>();
-        array.addAll(Arrays.asList(7, 6, 5, 10, 3, 2, 1, 0));
-
-        var array1 = (ArrayList<Integer>)array.clone();
 
         Main app = new Main();
 
+        app.generateData(array,10);
+        System.out.println(array);
+
+        ArrayList<Integer> array1 = new ArrayList<>();
+        app.generateData(array1,10);
+
+        System.out.println(array);
+
+        var startTime = System.currentTimeMillis();
         var noIteration = app.sort(array,false);
-        System.out.println("Sortowanie bąbelkowe: " + noIteration);
+        var endTime = System.currentTimeMillis();
+
+        var sortTime = endTime - startTime;
+
+        System.out.println("Sortowanie bąbelkowe: " + noIteration+" czas sortowania:"+sortTime);
 
         noIteration = app.standardSort(array1,false);
         System.out.println("Sortowanie Java: " + noIteration);
     }
 
     public void generateData(ArrayList<Integer> array,int noValues){
-        Math.random();
-
         Random random = new Random();
-        random.nextInt();
+        random.setSeed(System.currentTimeMillis());
+
+        for(int i=0;i<noValues;i++)
+            array.add(random.nextInt());
     }
 
     public int standardSort(ArrayList<Integer> array,boolean print){
