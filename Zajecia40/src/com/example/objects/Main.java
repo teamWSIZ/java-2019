@@ -7,23 +7,27 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
         ArrayList<Integer> array = new ArrayList<>();
-        //array.add(40);
         array.addAll(Arrays.asList(7, 6, 5, 10, 3, 2, 1, 0));
 
-        /*array.sort((n0, n1) -> {
+        Main app = new Main();
+
+        var noIteration = app.sort(array,false);
+        System.out.println("Liczba wejść do pętli: " + noIteration);
+
+        System.out.println(array);
+    }
+
+    public int standardSort(ArrayList<Integer> array,boolean print){
+        array.sort((n0, n1) -> {
             System.out.println(array);
             return Integer.compare(n0, n1);
-        });*/
+        });
 
-        System.out.println(array);
+        return 0;
+    }
 
-        Main app = new Main();
-        app.sort(array);
-
-        System.out.println(array);
-
+    public int sort(ArrayList<Integer> array,boolean print) {
         boolean swapped = true;
 
         int noIteration = 0;
@@ -42,24 +46,20 @@ public class Main {
 
                     swapped = true;
 
-                    System.out.println(array);
+                    if(print)
+                        System.out.println(array);
                 }
 
                 noIteration++;
             }
 
             lengthToSort = lengthToSort - 1;
-            System.out.println("------------------");
+
+            if(print)
+                System.out.println("------------------");
         }
 
-        System.out.println("Liczba wejść do pętli: " + noIteration);
-    }
-
-    public void sort(ArrayList<Integer> array) {
-        //[20, 1, 5, 3, 5, 6, 7, 8, 10]
-        //[1, 20, 5, 3, 5, 6, 7, 8, 10]
-        //[1, 5, 20, 3, 5, 6, 7, 8, 10]
-        //[1, 5, 3, 20, 5, 6, 7, 8, 10]
+        return noIteration;
     }
 
 
