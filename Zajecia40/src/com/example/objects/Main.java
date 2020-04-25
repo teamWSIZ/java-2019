@@ -19,12 +19,16 @@ public class Main {
     }
 
     public int standardSort(ArrayList<Integer> array,boolean print){
+        final int[] noIteration = {0};
+
         array.sort((n0, n1) -> {
-            System.out.println(array);
+            noIteration[0]++;
+            if(print)
+                System.out.println(array);
             return Integer.compare(n0, n1);
         });
 
-        return 0;
+        return noIteration[0];
     }
 
     public int sort(ArrayList<Integer> array,boolean print) {
