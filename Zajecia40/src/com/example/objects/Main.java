@@ -10,12 +10,15 @@ public class Main {
         ArrayList<Integer> array = new ArrayList<>();
         array.addAll(Arrays.asList(7, 6, 5, 10, 3, 2, 1, 0));
 
+        var array1 = (ArrayList<Integer>)array.clone();
+
         Main app = new Main();
 
         var noIteration = app.sort(array,false);
-        System.out.println("Liczba wejść do pętli: " + noIteration);
+        System.out.println("Sortowanie bąbelkowe: " + noIteration);
 
-        System.out.println(array);
+        noIteration = app.standardSort(array1,false);
+        System.out.println("Sortowanie Java: " + noIteration);
     }
 
     public int standardSort(ArrayList<Integer> array,boolean print){
