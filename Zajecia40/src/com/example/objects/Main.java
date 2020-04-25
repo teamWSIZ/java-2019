@@ -3,6 +3,7 @@ package com.example.objects;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -19,6 +20,13 @@ public class Main {
 
         noIteration = app.standardSort(array1,false);
         System.out.println("Sortowanie Java: " + noIteration);
+    }
+
+    public void generateData(ArrayList<Integer> array,int noValues){
+        Math.random();
+
+        Random random = new Random();
+        random.nextInt();
     }
 
     public int standardSort(ArrayList<Integer> array,boolean print){
