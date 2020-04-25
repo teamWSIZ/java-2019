@@ -5,6 +5,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+class sortInfo{
+    public int noIteration;
+    public long time;
+
+    sortInfo(int noIteration, long time){
+        this.noIteration = noIteration;
+        this.time = time;
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
@@ -34,10 +44,10 @@ public class Main {
 
     public void generateData(ArrayList<Integer> array,int noValues){
         Random random = new Random();
-        random.setSeed(System.currentTimeMillis());
+        random.setSeed(10);
 
         for(int i=0;i<noValues;i++)
-            array.add(random.nextInt());
+            array.add(random.nextInt(100));
     }
 
     public int standardSort(ArrayList<Integer> array,boolean print){
