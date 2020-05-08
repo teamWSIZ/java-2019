@@ -7,6 +7,8 @@ public class Main {
         String simpleText = "Pierwsza linia tekstu\n"
                 +"Kolejna linia tekstu";
 
+        //Text block dostępny od java 14.0.1 preview
+
         String blockText = """
                 Pierwsza linia tekstu
                 Kolejna linia tekstu
