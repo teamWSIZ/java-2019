@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e27712-d48a-42e2-a3f3-c1a9149fba3d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/DequeExample_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/DequeExample_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/DequeExample_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/DequeExample_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia35/src/main/java/com/example/dequearray/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia35/src/main/java/com/example/dequearray/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia33/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia33/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia33/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia33/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia34/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia34/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia34/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia34/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia35/.idea/Zajecia35.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia35/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia36/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia36/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia36/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia36/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia40/out/production/Zajecia40/com/example/objects/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia40/out/production/Zajecia40/com/example/objects/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia40/src/com/example/objects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia40/src/com/example/objects/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

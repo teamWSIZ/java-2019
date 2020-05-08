@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9c1e46a-6650-46ed-8e8e-2da4dea0b93a" name="Default Changelist" comment="" />
+    <list default="true" id="c9c1e46a-6650-46ed-8e8e-2da4dea0b93a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia32/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia32/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia32/.idea/modules/DequeExample_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia32/.idea/modules/DequeExample_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia32/.idea/modules/DequeExample_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia32/.idea/modules/DequeExample_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia32/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia32/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia33/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia33/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia33/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia33/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia34/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia34/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia34/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia34/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia35/.idea/Zajecia35.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia35/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia36/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia36/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia36/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia36/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia40/out/production/Zajecia40/com/example/objects/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia40/out/production/Zajecia40/com/example/objects/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia40/src/com/example/objects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia40/src/com/example/objects/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -59,6 +78,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1ZJcTLyzRrU7b76b8F6Ybp7l905" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -66,8 +88,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />

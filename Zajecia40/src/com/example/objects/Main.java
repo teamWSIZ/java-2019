@@ -27,13 +27,13 @@ public class Main {
 
         Main app = new Main();
 
-        app.generateData(array,10);
-        System.out.println(array);
+        app.generateData(array,10000);
+        //System.out.println(array);
 
         ArrayList<Integer> array1 = new ArrayList<>();
-        app.generateData(array1,10);
+        app.generateData(array1,10000);
 
-        System.out.println(array);
+        //System.out.println(array);
 
         var sortInfo = app.sort(array,false);
 
