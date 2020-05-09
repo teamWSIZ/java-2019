@@ -1,5 +1,8 @@
 package com.example.innerclass;
 
+import java.util.ArrayList;
+import java.util.function.Function;
+
 class OuterClass {
     private Double number;
 
@@ -36,11 +39,15 @@ class OuterClass {
 }
 
 public class Main {
+    ArrayList array = new ArrayList<Double>();
 
     public static void main(String[] args) {
         Main main = new Main();
         main.example();
         main.example1();
+
+        main.example2();
+
     }
 
     void example() {
@@ -84,5 +91,22 @@ public class Main {
         };
 
         classAbstract.printText("napis");
+    }
+
+    void example2(){
+        for(int i=0;i<10;i++)
+            array.add(i);
+
+        array.forEach(v->System.out.println(v));
+        array.forEach(System.out::println);
+
+        Function<String ,Double> methodReference = Main::print;
+        methodReference.apply("Przykładowy tekst");
+    }
+
+    static Double print(String text){
+        System.out.println("Metoda print klasy main: "+text);
+
+        return 0.0;
     }
 }
