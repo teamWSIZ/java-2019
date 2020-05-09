@@ -1,20 +1,20 @@
 package com.example.innerclass;
 
-public class Main {
-
-    class OuterClass{
-        class ClassA{
-            @Override
-            public String toString() {
-                return "ClassA";
-            }
-        }
-
+class OuterClass{
+    class ClassA{
         @Override
         public String toString() {
-            return "OuterClass";
+            return "ClassA";
         }
     }
+
+    @Override
+    public String toString() {
+        return "OuterClass";
+    }
+}
+
+public class Main {
 
     public static void main(String[] args) {
 	// write your code here
