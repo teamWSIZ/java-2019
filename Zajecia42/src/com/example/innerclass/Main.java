@@ -6,6 +6,21 @@ class OuterClass{
         public String toString() {
             return "ClassA";
         }
+
+    }
+
+    static class ClassB{
+        @Override
+        public String toString() {
+            return "ClassB";
+        }
+
+        static class nextClass{
+            @Override
+            public String toString() {
+                return "nextClass";
+            }
+        }
     }
 
     @Override
@@ -30,5 +45,13 @@ public class Main {
 
         OuterClass.ClassA classA = outerClass.new ClassA();
         System.out.println(classA);
+
+        OuterClass.ClassB classB = new OuterClass.ClassB();
+
+        var classB1 = new OuterClass.ClassB();
+        System.out.println(classB);
+
+        var nextClass = new OuterClass.ClassB.nextClass();
+        System.out.println(nextClass);
     }
 }
