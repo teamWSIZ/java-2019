@@ -38,7 +38,6 @@ class OuterClass {
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
         Main main = new Main();
         main.example();
         main.example1();
