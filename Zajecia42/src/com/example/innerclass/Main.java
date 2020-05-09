@@ -39,7 +39,7 @@ class OuterClass {
 }
 
 public class Main {
-    ArrayList array = new ArrayList<Double>();
+    ArrayList<Integer> array = new ArrayList<Integer>();
 
     public static void main(String[] args) {
         Main main = new Main();
