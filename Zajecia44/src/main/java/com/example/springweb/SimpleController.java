@@ -35,8 +35,11 @@ public class SimpleController {
         return a+"*x^2+"+b+"*x+"+c;
     }
 
-    @RequestMapping("array")
-    ArrayList<Double> getArray(){
+    @RequestMapping("equation/sample")
+    ArrayList<Double> getArray(@RequestParam(value = "A", defaultValue = "2.0") Double a,
+                               @RequestParam(value = "B", defaultValue = "2.0") Double b,
+                               @RequestParam(value = "C", defaultValue = "2.0") Double c,
+                               @RequestParam(value = "x", defaultValue = "1.0") Double x){
         ArrayList<Double> array = new ArrayList<>();
         for(int i=0;i<100;i++)
             array.add((double)i);
