@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 public class SimpleController {
     @RequestMapping("/")
@@ -22,5 +24,23 @@ public class SimpleController {
                      @RequestParam(value = "x", defaultValue = "1.0") Double x) {
         //y=a*x^2+bx+c
         return a * x + x + b * x + c;
+    }
+
+    @RequestMapping("equation/print")
+    String getEquation(@RequestParam(value = "A", defaultValue = "2.0") Double a,
+                     @RequestParam(value = "B", defaultValue = "2.0") Double b,
+                     @RequestParam(value = "C", defaultValue = "2.0") Double c,
+                     @RequestParam(value = "x", defaultValue = "1.0") Double x) {
+        //y=a*x^2+bx+c
+        return a+"*x^2+"+b+"*x+"+c;
+    }
+
+    @RequestMapping("array")
+    ArrayList<Double> getArray(){
+        ArrayList<Double> array = new ArrayList<>();
+        for(int i=0;i<100;i++)
+            array.add((double)i);
+
+        return array;
     }
 }
