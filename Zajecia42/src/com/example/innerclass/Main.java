@@ -1,6 +1,7 @@
 package com.example.innerclass;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 class OuterClass {
@@ -101,6 +102,7 @@ public class Main {
         array.forEach(System.out::println);
 
         Function<String ,Double> methodReference = Main::print;
+
         methodReference.apply("Przykładowy tekst");
     }
 
