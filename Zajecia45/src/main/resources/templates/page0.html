@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
 <body>
+<h2>Dane studenta</h2>
+<p th:text="'Imię: '+${name}"></p>
+<p th:text="'Nazwisko: '+${surname}"></p>
 </body>
 </html>
