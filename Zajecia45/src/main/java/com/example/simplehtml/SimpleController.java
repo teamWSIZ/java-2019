@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SimpleController {
+    int tab[][] = {{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5}};
+
     @RequestMapping("/")
     String getInfo() {
         return "info";
@@ -28,5 +30,16 @@ public class SimpleController {
     String getNumber(@PathVariable("i") Integer i,
                      @RequestParam(value = "j", defaultValue = "1.0") Double j) {
         return i + "*" + j + "=" + i * j;
+    }
+
+    @RequestMapping("tab")
+    int[][] getTab(){
+        return tab;
+    }
+
+    // tab/2/2
+    @RequestMapping("tab/{i}/{j}")
+    Integer getTabNo(@PathVariable("i") Integer i, @PathVariable("j") Integer j){
+        return tab[i][j];
     }
 }
