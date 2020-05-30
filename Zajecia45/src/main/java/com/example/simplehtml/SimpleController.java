@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SimpleController {
-    int tab[][] = {{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5}};
+    int tab[][] = {{1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}};
 
     @RequestMapping("/")
     String getInfo() {
@@ -33,13 +33,20 @@ public class SimpleController {
     }
 
     @RequestMapping("tab")
-    int[][] getTab(){
+    int[][] getTab() {
         return tab;
     }
 
     // tab/2/2
     @RequestMapping("tab/{i}/{j}")
-    Integer getTabNo(@PathVariable("i") Integer i, @PathVariable("j") Integer j){
-        return tab[i][j];
+    String getTabNo(@PathVariable("i") Integer i, @PathVariable("j") Integer j) {
+        String tabNoInfo = "";
+        try{
+            tabNoInfo =  "tab[" + i + "][" + j + "]=" + tab[i][j];
+        }catch(ArrayIndexOutOfBoundsException e){
+            tabNoInfo = "Nieprawidłowy indeks";
+        }
+
+        return tabNoInfo;
     }
 }
