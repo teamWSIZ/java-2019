@@ -12,7 +12,17 @@ public class SimpleController {
     }
     // name?name=przemyslaw&surname=stoklosa
     @RequestMapping("name")
-    String getName(@RequestParam("name") String n, @RequestParam("surname") String s){
+    String getName(@RequestParam(value = "name", defaultValue="Przemysław") String n,
+                   @RequestParam(value = "surname", required = false) String s){
+
+        if(s==null)
+            return "Nazwisko nie zostało wprowadzone";
+
         return n+" "+s;
+    }
+
+    @RequestMapping("number/{i}")
+    Double getNumber(){
+        return 0.0;
     }
 }
