@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+
 @Controller
 public class NextController {
     @RequestMapping("student")
@@ -16,5 +18,16 @@ public class NextController {
         model.addAttribute("surname",surname);
 
         return "page0";
+    }
+
+    @RequestMapping("tablica")
+    String getTable(Model model){
+        ArrayList<Double> tab = new ArrayList<>();
+        for(int i=0;i<10;i++)
+            tab.add((double)i);
+
+        model.addAttribute("table",tab);
+
+        return "table0";
     }
 }
