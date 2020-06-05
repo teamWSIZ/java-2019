@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 public class SimpleController {
     int tab[][] = {{1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}};
@@ -53,5 +55,14 @@ public class SimpleController {
     @RequestMapping("studentinfo")
     Student getStudent(){
         return new Student("Przemysław","Stokłosa");
+    }
+
+    @RequestMapping("studenci")
+    ArrayList<Student> getStudents(){
+        ArrayList<Student> students = new ArrayList<>();
+        for(int i=0;i<10;i++)
+            students.add(new Student("Przemysław","Stokłosa"));
+
+        return students;
     }
 }
