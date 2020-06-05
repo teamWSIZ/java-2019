@@ -61,7 +61,7 @@ public class SimpleController {
     ArrayList<Student> getStudents(){
         ArrayList<Student> students = new ArrayList<>();
         for(int i=0;i<10;i++)
-            students.add(new Student("Przemysław","Stokłosa"));
+            students.add(new Student("Przemysław","Stokłosa_"+i));
 
         return students;
     }

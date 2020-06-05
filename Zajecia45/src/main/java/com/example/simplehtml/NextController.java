@@ -30,4 +30,15 @@ public class NextController {
 
         return "table0";
     }
+
+    @RequestMapping("studenciinfo")
+    String getStudents(Model model){
+        ArrayList<Student> students = new ArrayList<>();
+        for(int i=0;i<10;i++)
+            students.add(new Student("Przemysław","Stokłosa_"+i));
+
+        model.addAttribute("students",students);
+
+        return "students0";
+    }
 }

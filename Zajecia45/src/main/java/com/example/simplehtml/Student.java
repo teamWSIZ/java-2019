@@ -7,11 +7,10 @@ public class Student {
     String name;
     String surname;
 
-    static Integer id = 0;
+    Integer id;
 
     Student(String name, String surname){
-        id++;
         this.name = name;
-        this.surname = surname+"_"+id;
+        this.surname = surname;
     }
 }
