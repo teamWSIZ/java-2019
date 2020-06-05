@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Simple console</title>
 </head>
 <body>
-Simple console
+<table>
+    <thead>Simple console</thead>
+    <tbody>
+    <tr th:each="element: ${consoleText}">
+        <td th:text="'linia: '+${element}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
