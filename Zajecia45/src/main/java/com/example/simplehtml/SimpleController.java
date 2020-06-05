@@ -49,4 +49,9 @@ public class SimpleController {
 
         return tabNoInfo;
     }
+
+    @RequestMapping("studentinfo")
+    Student getStudent(){
+        return new Student("Przemysław","Stokłosa");
+    }
 }
