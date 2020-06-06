@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class Worker implements Runnable{
 
     private static int no = 0;
-    private int number;
+    private final int number;
 
     Worker(){
         number = no;
