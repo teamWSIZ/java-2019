@@ -5,7 +5,7 @@ class Worker implements Runnable{
     @Override
     public void run() {
         for(int i=0;i<100;i++)
-            System.out.println("Worker: i="+i);
+            System.out.println("Worker(1): i="+i);
     }
 }
 
