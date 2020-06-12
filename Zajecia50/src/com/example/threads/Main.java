@@ -23,7 +23,7 @@ public class Main {
         return ()->{
             double result = 0.0;
 
-            for(int i=0;i<10;i++){
+            for(double i=0;i<=10;i++){
                 TimeUnit.MILLISECONDS.sleep(200);
                 result+=A*i*i+B*i+C;
             }
