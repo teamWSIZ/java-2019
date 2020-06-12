@@ -13,11 +13,14 @@ public class Main {
         };*/
 
         Runnable runnable = ()->{
-            while(true) {
+            boolean interrupted = false;
+            while(!interrupted) {
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
+                    System.out.println(e.getMessage());
+                    interrupted = true;
                 }
                 System.out.println("runnable1");
             }
