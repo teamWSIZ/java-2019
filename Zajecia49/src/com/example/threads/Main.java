@@ -1,5 +1,6 @@
 package com.example.threads;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -33,5 +34,23 @@ public class Main {
 
         TimeUnit.SECONDS.sleep(5);
         thread.interrupt();
+
+        Callable<Double> callable = ()->{
+            double result = 0;
+
+            for(int i=0;i<100;i++) {
+                result += Math.sin(i);
+                TimeUnit.MILLISECONDS.sleep(10);
+                System.out.println("result = "+result);
+            }
+
+            return result;
+        };
+
+        try {
+            System.out.println("Wynik obliczeń:" +callable.call());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
