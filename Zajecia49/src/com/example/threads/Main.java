@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         /*Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -27,6 +27,8 @@ public class Main {
 
         Thread thread = new Thread(runnable);
         thread.start();
+
+        TimeUnit.SECONDS.sleep(5);
         thread.interrupt();
     }
 }
