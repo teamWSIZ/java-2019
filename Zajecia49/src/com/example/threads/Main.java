@@ -1,8 +1,32 @@
 package com.example.threads;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        /*Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("runnable");
+            }
+        };*/
+
+        Runnable runnable = ()->{
+            while(true) {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("runnable1");
+            }
+        };
+
+        //runnable.run();
+
+        Thread thread = new Thread(runnable);
+        thread.start();
+        thread.interrupt();
     }
 }
