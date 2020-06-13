@@ -16,7 +16,8 @@ public class Main {
         //System.out.println("Równanie 1: "+callable0.call());
         //System.out.println("Równanie 2: "+callable1.call());
 
-        ExecutorService service = Executors.newFixedThreadPool(2);
+        ExecutorService service = Executors.newWorkStealingPool();
+
         Future<Double> future0 = service.submit(callable0);
         Future<Double> future1 = service.submit(callable1);
 
@@ -37,9 +38,11 @@ public class Main {
         return ()->{
             double result = 0.0;
 
-            for(double i=0;i<=100000000;i++){
-                //TimeUnit.MILLISECONDS.sleep(10);
+            for(double i=0;i<=100;i++){
+                TimeUnit.MILLISECONDS.sleep(10);
                 result+=A*i*i+B*i+C;
+
+                //System.out.println(Thread.currentThread().getName()+" Partial result: "+result);
             }
             return result;
         };
