@@ -38,11 +38,16 @@ public class Main {
         return ()->{
             double result = 0.0;
 
-            for(double i=0;i<=100;i++){
-                TimeUnit.MILLISECONDS.sleep(10);
-                result+=A*i*i+B*i+C;
+            try {
+                for (double i = 0; i <= 100; i++) {
+                    TimeUnit.MILLISECONDS.sleep(10);
+                    result += A * i * i + B * i + C;
 
-                //System.out.println(Thread.currentThread().getName()+" Partial result: "+result);
+                    //System.out.println(Thread.currentThread().getName()+" Partial result: "+result);
+                }
+            }catch(InterruptedException e){
+                System.out.println("Przerwano obliczenia: "+e.getMessage());
+                result = -1;
             }
             return result;
         };
