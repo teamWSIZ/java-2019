@@ -1,12 +1,10 @@
 package com.example.threads;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-	// write your code here
         Main main = new Main();
         main.example();
     }
@@ -15,16 +13,32 @@ public class Main {
         Callable<Double> callable0 = squareEquation(5,5,5);
         Callable<Double> callable1 = squareEquation(1,10,8);
 
-        System.out.println("Równanie 1: "+callable0.call());
-        System.out.println("Równanie 2: "+callable1.call());
+        //System.out.println("Równanie 1: "+callable0.call());
+        //System.out.println("Równanie 2: "+callable1.call());
+
+        ExecutorService service = Executors.newFixedThreadPool(2);
+        Future<Double> future0 = service.submit(callable0);
+        Future<Double> future1 = service.submit(callable1);
+
+        System.out.println("Oczekuję na wykonanie zadań...");
+        Long startTime = System.currentTimeMillis();
+
+        System.out.println("Równanie 0: "+future0.get());
+        System.out.println("Równanie 1: "+future1.get());
+
+        Long endTime = System.currentTimeMillis();
+
+        service.shutdown();
+        System.out.println("Zakończono obliczenia: "+(endTime-startTime)+"ms");
+
     }
 
     Callable<Double> squareEquation(double A, double B, double C){
         return ()->{
             double result = 0.0;
 
-            for(double i=0;i<=10;i++){
-                TimeUnit.MILLISECONDS.sleep(200);
+            for(double i=0;i<=100000000;i++){
+                //TimeUnit.MILLISECONDS.sleep(10);
                 result+=A*i*i+B*i+C;
             }
             return result;
