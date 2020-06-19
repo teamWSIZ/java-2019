@@ -9,26 +9,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-class ChatLine{
-    SimpleDateFormat dateFormat = new SimpleDateFormat("h:mm a");
-
-    final Date date;
-    final String lineText;
-    final String name;
-    final String surname;
-
-    ChatLine(String name, String surname, String text){
-        this.name = name;
-        this.surname = surname;
-        lineText = text;
-        date = new Date();
-    }
-    @Override
-    public String toString() {
-        return lineText+" "+"["+name+" "+surname+" "+dateFormat.format(date)+"]";
-    }
-}
-
 public class Main {
     ArrayDeque<ChatLine> chatDeque;
 
