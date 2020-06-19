@@ -15,7 +15,7 @@ class ChatLine{
     }
     @Override
     public String toString() {
-        return "ChatLine{}";
+        return "nasz text [nasza data]";
     }
 }
 
