@@ -4,27 +4,44 @@ import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
 import java.util.Date;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class Main {
-    ArrayDeque<ChatLine> chatDeque;
-
-    User przemyslaw = new User("Przemysław","Stokłosa");
+    ArrayDeque<ChatLine> chatDeque = new ArrayDeque<>();
 
     public static void main(String[] args) {
-	// write your code here
-        ExecutorService chatService = Executors.newWorkStealingPool();
-        Future<ChatLine> future0 = chatService.submit(createUser("Name","Surname"));
-
-        System.out.println(new ChatLine("Przemysław", "Stokłosa","Nasz tekst"));
+        Main main = new Main();
+        main.example();
     }
 
-    static Callable<ChatLine> createUser(String name, String surname){
+    void example(){
+        User przemyslaw = new User("Przemysław","Stokłosa");
+
+        ExecutorService chatService = Executors.newWorkStealingPool();
+        Future<ChatLine> future0 = chatService.submit(createChatUser(przemyslaw));
+
+        chatDeque.add(new ChatLine(przemyslaw,"Nasz tekst"));
+        try {
+            future0.get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(chatDeque);
+    }
+
+    Callable<ChatLine> createChatUser(User user){
         return ()->{
-            return new ChatLine("Przemysław","Stokłosa","Zakończono: ");
+            int no = 0;
+            while(no<10) {
+                TimeUnit.MILLISECONDS.sleep(200);
+                chatDeque.add(new ChatLine(user, "Kolejna linia"));
+                no++;
+            }
+
+            return new ChatLine(user,"Zakończono rozmowę");
         };
     }
 }

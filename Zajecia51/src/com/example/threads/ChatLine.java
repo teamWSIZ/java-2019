@@ -8,17 +8,16 @@ class ChatLine{
 
     final Date date;
     final String lineText;
-    final String name;
-    final String surname;
 
-    ChatLine(String name, String surname, String text){
-        this.name = name;
-        this.surname = surname;
+    final User user;
+
+    ChatLine(User user, String text){
+        this.user = user;
         lineText = text;
         date = new Date();
     }
     @Override
     public String toString() {
-        return lineText+" "+"["+name+" "+surname+" "+dateFormat.format(date)+"]";
+        return lineText+" "+"["+user.getName()+" "+user.getSurname()+" "+dateFormat.format(date)+"]"+"\n";
     }
 }
