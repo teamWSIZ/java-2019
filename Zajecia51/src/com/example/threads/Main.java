@@ -12,6 +12,8 @@ import java.util.concurrent.Future;
 public class Main {
     ArrayDeque<ChatLine> chatDeque;
 
+    User przemyslaw = new User("Przemysław","Stokłosa");
+
     public static void main(String[] args) {
 	// write your code here
         ExecutorService chatService = Executors.newWorkStealingPool();
