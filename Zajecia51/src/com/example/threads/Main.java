@@ -1,6 +1,8 @@
 package com.example.threads;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.*;
 
 public class Main {
@@ -12,18 +14,21 @@ public class Main {
     }
 
     void example(){
+        ArrayList<User> users = new ArrayList<>();
+
+        User przemyslaw = new User("Przemysław", "Stokłosa");
         User jozef = new User("Józef","Kudrys");
         User krzysztof = new User("Krzystof","Zarębski");
+        User katarzyna = new User("Katarzyna","Skrzyp");
+        User anna = new User("Anna","Surma");
+
+        users.addAll(Arrays.asList(przemyslaw,jozef,krzysztof,katarzyna,anna));
 
         ExecutorService chatService = Executors.newWorkStealingPool();
 
-        Future<ChatLine> future0 = chatService.submit(createChatUser(jozef));
-        Future<ChatLine> future1 = chatService.submit(createChatUser(krzysztof));
-
         chatDeque.add(new ChatLine(jozef,"Nasz tekst"));
 
-        chatUserHelper(future0,2,TimeUnit.SECONDS);
-        chatUserHelper(future1,2, TimeUnit.SECONDS);
+        users.forEach(user -> {chatUserHelper(chatService,user,2,TimeUnit.SECONDS);});
 
         chatDeque.forEach(System.out::println);
     }
@@ -41,15 +46,15 @@ public class Main {
         };
     }
 
-    void chatUserHelper(Future<ChatLine> chatUser, long timeout, TimeUnit timeUnit){
+    void chatUserHelper(ExecutorService service, User user, long timeout, TimeUnit timeUnit){
+        Future<ChatLine> chatUser = service.submit(createChatUser(user));
         try {
-            chatUser.get(timeout,timeUnit);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+            chatDeque.add(chatUser.get(timeout,timeUnit));
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
-            System.out.println("Zakończono rozmowę po dwóch sekundach");
+            chatDeque.add(new ChatLine(user,"System przerwał rozmowę"));
+            //System.out.println("Zakończono rozmowę po dwóch sekundach");
         }
     }
 
