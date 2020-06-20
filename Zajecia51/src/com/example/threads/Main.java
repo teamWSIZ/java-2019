@@ -1,9 +1,6 @@
 package com.example.threads;
 
-import javax.xml.crypto.Data;
-import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
-import java.util.Date;
 import java.util.concurrent.*;
 
 public class Main {
@@ -15,21 +12,28 @@ public class Main {
     }
 
     void example(){
-        User przemyslaw = new User("Przemysław","Stokłosa");
+        User jozef = new User("Józef","Kudrys");
+        User krzysztof = new User("Krzystof","Zarębski");
 
         ExecutorService chatService = Executors.newWorkStealingPool();
-        Future<ChatLine> future0 = chatService.submit(createChatUser(przemyslaw));
 
-        chatDeque.add(new ChatLine(przemyslaw,"Nasz tekst"));
+        Future<ChatLine> future0 = chatService.submit(createChatUser(jozef));
+        Future<ChatLine> future1 = chatService.submit(createChatUser(krzysztof));
+
+        chatDeque.add(new ChatLine(jozef,"Nasz tekst"));
+
+
         try {
-            future0.get();
+            chatDeque.add(future0.get());
+            chatDeque.add(future1.get());
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
 
-        System.out.println(chatDeque);
+        chatDeque.forEach(System.out::println);
     }
 
     Callable<ChatLine> createChatUser(User user){

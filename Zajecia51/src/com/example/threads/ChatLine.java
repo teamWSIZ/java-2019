@@ -18,6 +18,6 @@ class ChatLine{
     }
     @Override
     public String toString() {
-        return lineText+" "+"["+user.getName()+" "+user.getSurname()+" "+dateFormat.format(date)+"]"+"\n";
+        return lineText+" "+"["+user.getName()+" "+user.getSurname()+" "+dateFormat.format(date)+"]";
     }
 }
