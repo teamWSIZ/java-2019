@@ -18,19 +18,19 @@ public class Main {
         ExecutorService chatService = Executors.newWorkStealingPool();
 
         Future<ChatLine> future0 = chatService.submit(createChatUser(jozef));
-        Future<ChatLine> future1 = chatService.submit(createChatUser(krzysztof));
+        //Future<ChatLine> future1 = chatService.submit(createChatUser(krzysztof));
 
         chatDeque.add(new ChatLine(jozef,"Nasz tekst"));
 
 
         try {
-            chatDeque.add(future0.get());
-            chatDeque.add(future1.get());
-
+            chatDeque.add(future0.get(2,TimeUnit.SECONDS));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
+        } catch (TimeoutException e) {
+            System.out.println("Zakończono rozmowę po dwóch sekundach");
         }
 
         chatDeque.forEach(System.out::println);
@@ -39,7 +39,7 @@ public class Main {
     Callable<ChatLine> createChatUser(User user){
         return ()->{
             int no = 0;
-            while(no<10) {
+            while(no<100) {
                 TimeUnit.MILLISECONDS.sleep(200);
                 chatDeque.add(new ChatLine(user, "Kolejna linia"));
                 no++;
