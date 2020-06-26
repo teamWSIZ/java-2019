@@ -32,12 +32,13 @@ public class Main {
         try {
             printTwoArrays(array1, array2);
             printTwoArrays(array1, namesArray);
+
         } catch (Exception e) {
             System.out.println("Nie udało się wyświetlić tablic: " + e.getMessage());
         }
     }
 
-    void printTwoArrays(List<Integer> data1, List<Double> data2) throws Exception {
+    <T,U> void printTwoArrays(List<T> data1, List<U> data2) throws Exception {
         //Przemysław: 174
 
         if (data1.size() != data2.size()) {
@@ -46,7 +47,7 @@ public class Main {
 
         int index = 0;
 
-        for(Integer element: data1){
+        for(T element: data1){
             System.out.println(element+" : "+data2.get(index));
             index++;
         }
