@@ -4,23 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class MyClass<T>{
-    List<T> array;
-    MyClass(){
-    }
-    MyClass(List<T> array){
-        this.array = array;
-    }
-
-    void printArray(List<T> data){
-        data.forEach(System.out::println);
-    }
-
-    <U> void nextPrint(List<U> data){
-        data.forEach(System.out::println);
-    }
-}
-
 public class Main {
 
     public static void main(String[] args) {
