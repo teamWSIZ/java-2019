@@ -16,7 +16,7 @@ public class DatabaseApplication {
 	@Bean
 	CommandLineRunner addStudents(StudentRepository repository){
 		return (args)->{
-			for(int i=0;i<10000;i++) {
+			for(int i=0;i<100;i++) {
 				repository.save(new Student("Przemysław", "Stokłosa" + i));
 				repository.save(new Student("Piotr", "Stokłosa" + i));
 			}
