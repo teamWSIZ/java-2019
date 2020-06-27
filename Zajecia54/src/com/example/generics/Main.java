@@ -44,12 +44,18 @@ public class Main {
         d.print();
 
         ArrayList<A> arrayA = new ArrayList<>();
-        // to nie zadziała funE(arrayA);
+        // to nie zadziała
+        // funE(arrayA);
 
         ArrayList<C> array = new ArrayList<>();
         ArrayList<D> array1 = new ArrayList<>();
+
         funE(array);
         funE(array1);
+
+        funS(array);
+        //To nie zadziała
+        // funS(array1);
     }
 
     void funE(ArrayList<? extends C> data){
@@ -59,7 +65,6 @@ public class Main {
     }
     void funS(ArrayList<? super C> data){
         //A->B->C->D->E
-        //Działa do tego momentu:
-
+        //Działa do tego momentu: A->B->C
     }
 }
