@@ -1,7 +1,5 @@
 package com.example.generics;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 
 class A{
@@ -49,7 +47,7 @@ public class Main {
         funE(array1);
     }
 
-    void funE(@NotNull ArrayList<? extends C> data){
+    void funE(ArrayList<? extends C> data){
         //A->B->C->D->E
         //Działa od tego momentu: C->D->E, tutaj pojawiła się funkcja print
         data.forEach(C::print);
