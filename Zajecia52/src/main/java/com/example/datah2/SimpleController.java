@@ -1,8 +1,12 @@
 package com.example.datah2;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -33,4 +37,12 @@ public class SimpleController {
         model.addAttribute("students",students);
         return "listStudents";
     }
+    @RequestMapping("page/{no}")
+    String listPagedStudents(@PathVariable("no") int no, Model model){
+        Pageable pageable = PageRequest.of(no,10);
+        Page<Student> students = repository.findAll(pageable);
+        model.addAttribute("students",students);
+        return "listStudents";
+    }
+
 }
