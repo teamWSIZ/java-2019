@@ -3,7 +3,9 @@ package com.example.generics;
 import java.util.ArrayList;
 
 class A{
-
+    void simpleEquation(){
+        System.out.println("Tutaj coś obliczamy");
+    }
 }
 class B extends A{
 
@@ -17,7 +19,10 @@ class C extends B{
     }
 }
 class D extends C{
-
+    @Override
+    void simpleEquation(){
+        System.err.println("Ta funkcja została zastąpiona inną");
+    }
 }
 class E extends D{
 
@@ -52,7 +57,9 @@ public class Main {
         //Działa od tego momentu: C->D->E, tutaj pojawiła się funkcja print
         data.forEach(C::print);
     }
-    void funS(){
+    void funS(ArrayList<? super C> data){
+        //A->B->C->D->E
+        //Działa do tego momentu:
 
     }
 }
