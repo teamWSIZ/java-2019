@@ -74,6 +74,7 @@ public class Main {
             //printTwoArraysSum1(integerArray,doubleArray);
 
             printTwoArraysSumExtends(integerArray,doubleArray);
+            // printTwoArraysSumExtends(integerArray,stringArray) z tablica tekstowa nie kompiluje sie;
 
             //Natomiast funkcja po wczytaniu tablicy z elementami string nie dziala
             //printTwoArraysSum1(integerArray,stringArray);
@@ -137,8 +138,12 @@ public class Main {
             throw new Exception("Tablice posiadaja inna ilosc elemntow");
 
         for(int i=0;i<data1.size();i++){
-            double sum = (double)data1.get(i)+(double)data2.get(i);
-            System.out.println(data1.get(i)+" + "+data2.get(i)+" = "+sum);
+            try {
+                double sum = Double.parseDouble(data1.get(i).toString()) + Double.parseDouble(data2.get(i).toString());
+                System.out.println(data1.get(i) + " + " + data2.get(i) + " = " + sum);
+            }catch(Exception e){
+                throw new Exception("Wystapil blad przy konwertowaniu elementu nr: "+i);
+            }
         }
     }
 
