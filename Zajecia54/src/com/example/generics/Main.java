@@ -67,9 +67,29 @@ public class Main {
             // printTwoArrays(integerArray,doubleArray);
             // printTwoArrays(integerArray,stringArray);
             printTwoArraysSum(integerArray,integerArray);
+            // ta metoda nie kompiluje sie, wymaga obu typow integer
+            // printTwoArraysSum(integerArray,doubleArray);
+
+            //Tutaj pomaga dodanie <T,U> jednak pojawia sie problem z typem integer
+            //printTwoArraysSum1(integerArray,doubleArray);
+
+            printTwoArraysSumExtends(integerArray,doubleArray);
+
+            //Natomiast funkcja po wczytaniu tablicy z elementami string nie dziala
+            //printTwoArraysSum1(integerArray,stringArray);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Number a = 1.0;
+        Number b = 1;
+
+        Number sum = Double.parseDouble(a.toString())+Double.parseDouble(b.toString());
+        System.out.println(sum);
+
+        //System.out.println("a = "+a+" a1= "+a1);
 
     }
 
@@ -101,6 +121,28 @@ public class Main {
             System.out.println(data1.get(i)+" + "+data2.get(i)+" = "+sum);
         }
     }
+
+    <T,U> void printTwoArraysSum1(ArrayList<T> data1, ArrayList<U> data2) throws Exception{
+        if(data1.size()!=data2.size())
+            throw new Exception("Tablice posiadaja inna ilosc elemntow");
+
+        for(int i=0;i<data1.size();i++){
+            double sum = (double)data1.get(i)+(double)data2.get(i);
+            System.out.println(data1.get(i)+" + "+data2.get(i)+" = "+sum);
+        }
+    }
+
+    void printTwoArraysSumExtends(ArrayList<? extends Number> data1, ArrayList<? extends Number> data2) throws Exception{
+        if(data1.size()!=data2.size())
+            throw new Exception("Tablice posiadaja inna ilosc elemntow");
+
+        for(int i=0;i<data1.size();i++){
+            double sum = (double)data1.get(i)+(double)data2.get(i);
+            System.out.println(data1.get(i)+" + "+data2.get(i)+" = "+sum);
+        }
+    }
+
+
 
 
 }
