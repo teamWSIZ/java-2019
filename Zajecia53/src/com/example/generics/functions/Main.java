@@ -10,6 +10,7 @@ public class Main {
     List<Double> array2 = Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0);
     List<String> namesArray = Arrays.asList("a","b","c","d","e","f","g","h","i","j");
 
+
     public static void main(String[] args) {
         Main main = new Main();
         // to test sparamtryzowanego obiektu main.example();
