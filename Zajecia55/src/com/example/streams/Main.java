@@ -1,6 +1,8 @@
 package com.example.streams;
 
 import java.util.ArrayList;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -19,5 +21,12 @@ public class Main {
         }
 
         System.out.println(array1);
+
+        Stream<String> stream = Stream.empty();
+        Stream<Integer> arrayStream = array.stream();
+
+        System.out.println(arrayStream.findFirst().get());
+
+        Optional<Integer> optional = Optional.of(10);
     }
 }
