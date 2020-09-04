@@ -35,12 +35,15 @@ public class Main {
     }
 
     void example1(){
-        List<String> arrayList = Arrays.asList("a","b","c","d","e","f","g");
+        List<String> arrayList = Arrays.asList("a","b","cd","d","e","f","g");
         Stream<String> stream = arrayList.stream();
 
         String element = arrayList.stream().findFirst().get();
         System.out.println("Pierwszy element: "+element);
         arrayList.stream().forEach(System.out::println);
+
+        System.out.println("-----------------------------");
+        arrayList.stream().filter(e->e.contains("d")).forEach(System.out::println);
 
     }
 }
