@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class Main {
@@ -31,7 +32,9 @@ public class Main {
 
         //Optional<Integer> optional = Optional.of(10);
 
-        new Main().example1();
+        Main main = new Main();
+        main.example1();
+        main.example2();
     }
 
     void example1(){
@@ -44,6 +47,18 @@ public class Main {
 
         System.out.println("-----------------------------");
         arrayList.stream().filter(e->e.contains("d")).forEach(System.out::println);
+    }
 
+    void example2(){
+        int no = 0;
+        final int[] arrayInt = new int[]{0};
+
+        Supplier<Integer> supplier = ()->{
+            return arrayInt[0]++;
+        };
+        Stream<Integer> stream = Stream.generate(()->(int)(Math.random()*10)).limit(10);
+        Stream<Integer> stream1 = Stream.generate(supplier).limit(50).map(e->e*e).filter(e->e<200);
+        stream.forEach(System.out::println);
+        stream1.forEach(System.out::println);
     }
 }
