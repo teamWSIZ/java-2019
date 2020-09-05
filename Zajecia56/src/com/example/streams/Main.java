@@ -41,8 +41,17 @@ public class Main {
     void example2(){
         final int[] array1 = new int[]{0};
 
-        IntStream stream = IntStream.generate(()->(array1[0]++)).limit(100);
-        stream.forEach(System.out::println);
+        IntStream stream = IntStream.generate(()->(array1[0]++)).limit(5);
+        //stream.forEach(System.out::println);
+
+
+        Integer no = stream.reduce((a,b)->{
+            System.out.println("accumulator: "+a);
+            System.out.println("current: "+b);
+            return a+10;
+        }).getAsInt();
+
+        System.out.println(no);
     }
 
 }
