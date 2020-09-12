@@ -17,12 +17,16 @@ public class Main {
         Main main = new Main();
 
         double average = main.average(array);
+        System.out.println("Średnia: "+average);
 
     }
 
     double average(ArrayList<Integer> arrayList){
-        double average = 0;
-        return average;
+        double sum = 0;
+        for(double e : arrayList)
+            sum+=e;
+
+        return sum/arrayList.size();
     }
 
 }
